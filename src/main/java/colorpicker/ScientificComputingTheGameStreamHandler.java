@@ -20,9 +20,7 @@ import main.java.colorpicker.handlers.FallbackIntentHandler;
 import main.java.colorpicker.handlers.HelpIntentHandler;
 import main.java.colorpicker.handlers.LaunchRequestHandler;
 import main.java.colorpicker.handlers.SessionEndedRequestHandler;
-import main.java.colorpicker.handlers.WhatsMyColorIntentHandler;
 import main.java.colorpicker.handlers.CancelandStopIntentHandler;
-import main.java.colorpicker.handlers.MyColorIsIntentHandler;
 
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
