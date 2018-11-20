@@ -11,6 +11,10 @@
      the specific language governing permissions and limitations under the License.
 */
 
+//
+
+//Das ist ein Kommentar für den Michi, beste Grüße aus Hogwarts
+
 package main.java.ScientificComputingTheGame;
 
 import com.amazon.ask.Skill;
@@ -25,6 +29,8 @@ import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
+    	int Harry = 0;
+
         return Skills.standard()
                 .addRequestHandlers(
                         new LaunchRequestHandler(),
