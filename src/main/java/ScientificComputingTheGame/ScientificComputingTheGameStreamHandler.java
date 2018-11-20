@@ -11,16 +11,16 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker;
+package main.java.ScientificComputingTheGame;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
-import main.java.colorpicker.handlers.FallbackIntentHandler;
-import main.java.colorpicker.handlers.HelpIntentHandler;
-import main.java.colorpicker.handlers.LaunchRequestHandler;
-import main.java.colorpicker.handlers.SessionEndedRequestHandler;
-import main.java.colorpicker.handlers.CancelandStopIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.FallbackIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.HelpIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.LaunchRequestHandler;
+import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
+import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
