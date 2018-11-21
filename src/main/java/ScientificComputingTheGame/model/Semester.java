@@ -10,5 +10,16 @@ public class Semester {
 		this.id = id;
 	}
 	
+	public ArrayList<Kurs> getKurse() {
+		return kurse;
+	}
 	
+	public void addKurs(Kurs kurs) {
+		kurse.add(kurs);
+	}
+	
+	public String fragenAbrufen(Kurs kurs) {
+		//TODO
+		return null;
+	}
 }
