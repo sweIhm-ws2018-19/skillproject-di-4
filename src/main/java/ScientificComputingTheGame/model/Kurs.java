@@ -13,6 +13,5 @@ public class Kurs {
 	public Fragen getFragen() {
 		//TODO get all Questions for this course
 		return fragen;
-	}
-	
+	}	
 }
