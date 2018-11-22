@@ -18,7 +18,6 @@ public abstract class Kurs {
 		pruefungBeginnen();
 		pruefungBewerten();
 	}
-	
 	public void pruefungBeginnen() {
 		for(Fragen a: fragen) {
 			a.frageBeginnen();
