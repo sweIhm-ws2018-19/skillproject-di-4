@@ -18,7 +18,7 @@ public abstract class Fragen {
 	public String antwortAbwarten() {
 		//TODO evtl. repeat question (frageBeginnen() or frageWiederholen()?)
 		//TODO get answer
-		String nutzerAntwort = "A";
+		String nutzerAntwort = "A";		//TODO change to String from input
 		return nutzerAntwort;
 	}
 	public boolean antwortRichtig(String userSolution) {

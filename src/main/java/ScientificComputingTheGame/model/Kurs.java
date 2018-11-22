@@ -6,42 +6,30 @@ public abstract class Kurs {
 	private boolean bestanden;
 	private int anzahlRichtigBeantworteteFragen;
 	protected ArrayList<Fragen> fragen;
-	protected ArrayList<Fragen> alleFragen;
+	private String momentaneAntwort;
 	
-	public abstract ArrayList<Fragen> alleFragenErzeugen();
-	public abstract int getAnzahlFragen();
-	
+	public abstract int getAnzahlZuBeantwortenderFragen();
+	public abstract ArrayList<Fragen> getFragen();
+
 	protected Kurs() {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
-		alleFragenErzeugen();
-		alleFragen = alleFragenErzeugen();
 		fragen = getFragen();
 		pruefungBeginnen();
 		pruefungBewerten();
 	}
-	public ArrayList<Fragen> getFragen() {
-		fragen = new ArrayList<Fragen>();
-		while (fragen.size() < alleFragen.size()) {
-			int indexDerFrage = (int) (Math.random() * (alleFragen.size()));
-			if (alleFragen.get(indexDerFrage).getAktiv()) {
-				fragen.add(alleFragen.get(indexDerFrage));
-				alleFragen.get(indexDerFrage).aktivSchalten();
-			}
-		}
-		return fragen;
-	}
+	
 	public void pruefungBeginnen() {
 		for(Fragen a: fragen) {
 			a.frageBeginnen();
-			a.antwortAbwarten();
-			if (a.antwortRichtig("")) {
+			momentaneAntwort = a.antwortAbwarten();
+			if (a.antwortRichtig(momentaneAntwort)) {
 				anzahlRichtigBeantworteteFragen++;
 			}
 		}
 	}
 	public void pruefungBewerten() {
-		if (anzahlRichtigBeantworteteFragen >= getAnzahlFragen()/2) {
+		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
 			bestanden = true;
 			kursBeenden();
 		}
