@@ -8,33 +8,24 @@ import main.java.ScientificComputingTheGame.model.AlleFragen.SoftwareEntwicklung
 
 public class SoftwareEntwicklung1 extends Kurs{
 	private String name = "Software Entwicklung 1";
-	private int anzahlFragen = 2;
-	private Fragen[] alleFragen = new Fragen[anzahlFragen];
+	private ArrayList<Fragen> alleFragen;
 
 	SoftwareEntwicklung1() {
 		super();
 	}
 	
-	public void alleFragenErzeugen() {
-		alleFragen[0] = new SoftwareEntwicklung1Frage1();
-		alleFragen[1] = new SoftwareEntwicklung1Frage2();
+	public ArrayList<Fragen> alleFragenErzeugen() {
+		ArrayList<Fragen> alleFragen = new ArrayList<Fragen>();
+		alleFragen.add(new SoftwareEntwicklung1Frage1());
+		alleFragen.add(new SoftwareEntwicklung1Frage2());
+		return alleFragen;
 	}
 	
 	public int getAnzahlFragen() {
-		return anzahlFragen;
+		return alleFragen.size();
 	}
 	
-	public ArrayList<Fragen> getFragen() {
-		fragen = new ArrayList<Fragen>();
-		while (fragen.size() < anzahlFragen) {
-			int indexDerFrage = (int) (Math.random() * (anzahlFragen));
-			if (alleFragen[indexDerFrage].getAktiv()) {
-				fragen.add(alleFragen[indexDerFrage]);
-				alleFragen[indexDerFrage].aktivSchalten();
-			}
-		}
-		return fragen;
-	}
+	
 	public String getName() {
 		return name;
 	}
