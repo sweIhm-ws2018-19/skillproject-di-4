@@ -9,6 +9,7 @@ public abstract class Kurs {
 	private String momentaneAntwort;
 	
 	public abstract int getAnzahlZuBeantwortenderFragen();
+	public abstract String getName();
 	public abstract ArrayList<Frage> getFragen();
 
 	protected Kurs() {

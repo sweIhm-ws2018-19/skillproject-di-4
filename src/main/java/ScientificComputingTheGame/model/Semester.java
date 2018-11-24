@@ -3,11 +3,12 @@ package main.java.ScientificComputingTheGame.model;
 import java.util.ArrayList;
 
 public class Semester {
-	private ArrayList<Kurs> kurse = new ArrayList<Kurs>();
+	private ArrayList<Kurs> kurse;
 	private int id;
 	
 	public Semester(int id) {
 		this.id = id;
+		kurse = new ArrayList<Kurs>();
 	}
 	
 	public ArrayList<Kurs> getKurse() {

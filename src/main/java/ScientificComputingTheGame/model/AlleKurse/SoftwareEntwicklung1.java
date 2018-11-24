@@ -8,7 +8,7 @@ public class SoftwareEntwicklung1 extends Kurs{
 	private String name = "Software Entwicklung 1";
 	private int anzahlZuBeantwortenderFragen = 2;
 
-	SoftwareEntwicklung1() {
+	public SoftwareEntwicklung1() {
 		super();
 	}
 	
@@ -37,10 +37,6 @@ public class SoftwareEntwicklung1 extends Kurs{
 	}
 
 	public int getAnzahlZuBeantwortenderFragen() {
-		return anzahlZuBeantwortenderFragen;
-	}
-
-	public int getAnzahlOffeneFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 }
