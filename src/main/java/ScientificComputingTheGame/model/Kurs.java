@@ -11,6 +11,7 @@ public abstract class Kurs {
 	public abstract int getAnzahlZuBeantwortenderFragen();
 	public abstract String getName();
 	public abstract ArrayList<Frage> getFragen();
+	public abstract int getECTS();
 
 	protected Kurs() {
 		bestanden = false;

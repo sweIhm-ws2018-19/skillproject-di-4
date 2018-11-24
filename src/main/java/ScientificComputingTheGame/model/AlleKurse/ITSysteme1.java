@@ -23,4 +23,10 @@ public class ITSysteme1 extends Kurs {
 		return null;
 	}
 
+	@Override
+	public int getECTS() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

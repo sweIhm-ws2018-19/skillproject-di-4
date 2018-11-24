@@ -39,4 +39,8 @@ public class SoftwareEntwicklung1 extends Kurs {
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
+
+	public int getECTS() {
+		return 8;
+	}
 }
