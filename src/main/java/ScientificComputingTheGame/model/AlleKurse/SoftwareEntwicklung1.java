@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
-public class SoftwareEntwicklung1 extends Kurs{
+public class SoftwareEntwicklung1 extends Kurs {
 	private String name = "Software Entwicklung 1";
 	private int anzahlZuBeantwortenderFragen = 2;
 

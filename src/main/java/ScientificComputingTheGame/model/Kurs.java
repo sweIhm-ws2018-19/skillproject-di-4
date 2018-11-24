@@ -48,4 +48,8 @@ public abstract class Kurs {
 	protected void kursWiederholen() {
 		// TODO Alexa says "Leider hast du den Kurs getName() nicht bestanden."
 	}
+	
+	public boolean getBestanden() {
+		return bestanden;
+	}
 }
