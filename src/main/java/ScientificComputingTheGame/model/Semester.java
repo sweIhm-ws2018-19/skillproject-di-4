@@ -11,6 +11,7 @@ public class Semester {
 		kurse = getKurse(offeneKurse);
 		pruefungsPhaseBeginnen();
 		offeneKurse = offeneKurse();
+		semesterBeenden();
 	}
 	
 	public ArrayList<Kurs> getKurse(ArrayList<Kurs> offeneKurse) {
@@ -66,5 +67,9 @@ public class Semester {
 			}
 		}
 		return kurse;
+	}
+	
+	private void semesterBeenden() {
+		//TODO "Sie haben das Semester beendet...
 	}
 }

@@ -1,6 +1,5 @@
 package main.java.ScientificComputingTheGame.model.AlleKurse;
 import java.util.ArrayList;
-
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
