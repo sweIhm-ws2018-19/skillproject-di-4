@@ -24,6 +24,7 @@ import main.java.ScientificComputingTheGame.handlers.FallbackIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.HelpIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.LaunchRequestHandler;
 import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
+import main.java.ScientificComputingTheGame.handlers.WelcomeIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
@@ -37,9 +38,10 @@ public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler 
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
-                        new FallbackIntentHandler())
+                        new FallbackIntentHandler(),
+                        new WelcomeIntentHandler())
                 // Add your skill id below
-                //.withSkillId("")
+                .withSkillId("amzn1.ask.skill.6c52904c-e625-439f-bde3-4322e243883e")
                 .build();
     }
 
