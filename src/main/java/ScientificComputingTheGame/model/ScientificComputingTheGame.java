@@ -6,9 +6,8 @@ public class ScientificComputingTheGame {
 	static Spieler spieler;
 	
 	public static void main(String args[]) {
-		String spielerName = spielerNachNamenFragen();
 		ArrayList<Kurs> offeneKurse = new ArrayList<Kurs>();
-		spieler = new Spieler(spielerName);
+		spieler = new Spieler();
 		studiumStarten(offeneKurse);
 	}
 	
@@ -20,10 +19,5 @@ public class ScientificComputingTheGame {
 			aktuellesSemester = new Semester(offeneKurse, semesterID);
 			offeneKurse = aktuellesSemester.offeneKurse();
 		}
-	}
-	
-	private static String spielerNachNamenFragen() {
-		// TODO Spieler nach Namen fragen
-		return"";
 	}
 }

@@ -6,10 +6,15 @@ public class Spieler {
 	private int anzahlECTS;
 	private int anzahlSemester;
 	
-	Spieler(String name) {
-		this.name = name;
+	Spieler() {
+		name = nachNamenFragen();
 		anzahlECTS = 0;
 		anzahlSemester = 0;
+	}
+
+	private String nachNamenFragen() {
+		// TODO Nutzer nach Namen fragen
+		return null;
 	}
 
 	public int getECTS() {
