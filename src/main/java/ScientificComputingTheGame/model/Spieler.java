@@ -6,18 +6,15 @@ public class Spieler {
 	private int anzahlECTS;
 	private int anzahlSemester;
 	
-	
 	Spieler(String name) {
 		this.name = name;
 		anzahlECTS = 0;
 		anzahlSemester = 0;
 	}
 
-
 	public int getECTS() {
 		return anzahlECTS;
 	}
-
 
 	public void addECTS(int ECTS) {
 		anzahlECTS += ECTS;

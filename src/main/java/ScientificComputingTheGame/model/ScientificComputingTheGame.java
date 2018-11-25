@@ -6,8 +6,8 @@ public class ScientificComputingTheGame {
 	static Spieler spieler;
 	
 	public static void main(String args[]) {
+		String spielerName = spielerNachNamenFragen();
 		ArrayList<Kurs> offeneKurse = new ArrayList<Kurs>();
-		String spielerName = spielerNahcNamenFragen();
 		spieler = new Spieler(spielerName);
 		studiumStarten(offeneKurse);
 	}
@@ -22,7 +22,7 @@ public class ScientificComputingTheGame {
 		}
 	}
 	
-	private static String spielerNahcNamenFragen() {
+	private static String spielerNachNamenFragen() {
 		// TODO Spieler nach Namen fragen
 		return"";
 	}
