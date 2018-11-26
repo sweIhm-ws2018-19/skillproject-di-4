@@ -18,7 +18,7 @@ public class ScientificComputingTheGame {
 			semesterID++;
 			aktuellesSemester = new Semester(offeneKurse, semesterID);
 			offeneKurse = aktuellesSemester.offeneKurse();
-			spieler.addECTS(210);
+			spieler.addECTS(210); //For Testing
 		}
 	}
 }
