@@ -5,51 +5,52 @@ import java.util.ArrayList;
 public abstract class Kurs {
 	private boolean bestanden;
 	private int anzahlRichtigBeantworteteFragen;
-	protected ArrayList<Fragen> fragen;
-	protected ArrayList<Fragen> alleFragen;
+	protected ArrayList<Frage> fragen;
+	private String momentaneAntwort;
 	
-	public abstract ArrayList<Fragen> alleFragenErzeugen();
-	public abstract int getAnzahlFragen();
-	
+	public abstract int getAnzahlZuBeantwortenderFragen();
+	public abstract String getName();
+	public abstract ArrayList<Frage> getFragen();
+	public abstract int getECTS();
+
 	protected Kurs() {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
-		alleFragenErzeugen();
-		alleFragen = alleFragenErzeugen();
 		fragen = getFragen();
-		pruefungBeginnen();
-		pruefungBewerten();
+		//pruefungBeginnen();
+		//pruefungBewerten();
 	}
-	public ArrayList<Fragen> getFragen() {
-		fragen = new ArrayList<Fragen>();
-		while (fragen.size() < alleFragen.size()) {
-			int indexDerFrage = (int) (Math.random() * (alleFragen.size()));
-			if (alleFragen.get(indexDerFrage).getAktiv()) {
-				fragen.add(alleFragen.get(indexDerFrage));
-				alleFragen.get(indexDerFrage).aktivSchalten();
-			}
-		}
-		return fragen;
-	}
+	
 	public void pruefungBeginnen() {
-		for(Fragen a: fragen) {
-			a.frageBeginnen();
-			a.antwortAbwarten();
-			if (a.antwortRichtig("")) {
+		for(Frage a: fragen) {
+			a.frageStellen();
+			momentaneAntwort = a.antwortAbwarten();
+			if (a.antwortRichtig(momentaneAntwort)) {
 				anzahlRichtigBeantworteteFragen++;
 			}
 		}
 	}
+	
 	public void pruefungBewerten() {
-		if (anzahlRichtigBeantworteteFragen >= getAnzahlFragen()/2) {
+		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
 			bestanden = true;
 			kursBeenden();
 		}
 		else {
+			kursWiederholen();
 			//TODO repeat test???
 		}
 	}
+	
 	protected void kursBeenden() {
 		// TODO Alexa says "Herzlichen Gluekwunsch. Du hast den Kurs getName() bestanden"
+	}
+	
+	protected void kursWiederholen() {
+		// TODO Alexa says "Leider hast du den Kurs getName() nicht bestanden."
+	}
+	
+	public boolean getBestanden() {
+		return bestanden;
 	}
 }
