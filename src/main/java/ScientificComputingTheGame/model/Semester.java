@@ -40,7 +40,7 @@ public class Semester {
 		else if(id == 5) {
 			//TODO evtl. starte Auslandssemester
 		}
-		return kurse;
+		return offeneKurse;
 	}
 	
 	public Kurs waehleAWFach() {
@@ -55,13 +55,15 @@ public class Semester {
 	
 	public void pruefungsPhaseBeginnen() {
 		for(Kurs momentanePruefung: kurse) {
+			if(momentanePruefung != null) {
 			momentanePruefung.pruefungBeginnen();
+			}
 		}
 	}
 	
 	public ArrayList<Kurs> offeneKurse() {
 		for(Kurs momentanerKurs: kurse) {
-			if(momentanerKurs.getBestanden()) {
+			if(momentanerKurs != null && momentanerKurs.getBestanden()) {
 				ScientificComputingTheGame.spieler.addECTS(momentanerKurs.getECTS());
 				kurse.remove(momentanerKurs);
 			}
