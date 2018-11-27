@@ -55,6 +55,7 @@ public class Semester {
 	
 	public void pruefungsPhaseBeginnen() {
 		for(Kurs momentanePruefung: kurse) {
+			momentanePruefung.pruefungBeginnen();
 			if(momentanePruefung != null) {
 			momentanePruefung.pruefungBeginnen();
 			}
