@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class ScientificComputingTheGame {
 	static Spieler spieler;
 	static String output = "Die Main wurde nicht ausgeführt";
-	
-	
+	public static void main(String args[]) {
+	static String output = "Die Main wurde nicht ausgeführt";
 	public static void main(String args[]) {
 		output = "Das Spiel wurde gestartet";
 		ArrayList<Kurs> offeneKurse = new ArrayList<Kurs>();
@@ -26,5 +26,5 @@ public class ScientificComputingTheGame {
 	}
 	public String getOutput() {
 		return output;
-	}
+  }
 }
