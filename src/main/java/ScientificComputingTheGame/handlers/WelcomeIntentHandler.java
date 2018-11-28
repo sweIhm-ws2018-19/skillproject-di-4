@@ -25,7 +25,7 @@ public class WelcomeIntentHandler implements RequestHandler{
 	public Optional<Response> handle(HandlerInput input) {
 		//ScientificComputingTheGame s = new ScientificComputingTheGame();
 		s.main(null);
-		String speechText = s.getOutput()+". Du bist jetzt im ersten Semester bitte wähle deine Kurse";
+		String speechText = s.getOutput()+". Du bist jetzt im ersten Semester bitte waehle deine Kurse";
 		return input.getResponseBuilder()
 				.withSpeech(speechText)
 				.withSimpleCard("helloworld", speechText)
