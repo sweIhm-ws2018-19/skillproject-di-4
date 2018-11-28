@@ -17,9 +17,8 @@ public abstract class Kurs {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
-		//pruefungBeginnen();
-		//pruefungBewerten();
-	}
+		pruefungBeginnen();
+		pruefungBewerten();
 	
 	public void pruefungBeginnen() {
 		for(Frage a: fragen) {
