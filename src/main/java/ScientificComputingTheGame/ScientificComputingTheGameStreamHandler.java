@@ -21,6 +21,7 @@ import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 import main.java.ScientificComputingTheGame.handlers.FallbackIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.FrageStellenIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.HelpIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.LaunchRequestHandler;
 import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
@@ -40,7 +41,9 @@ public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler 
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
-                        new WelcomeIntentHandler(s))
+                        new FrageStellenIntentHandler(),
+                        new WelcomeIntentHandler(s)
+                        )
                 // Add your skill id below
                 .withSkillId("amzn1.ask.skill.6c52904c-e625-439f-bde3-4322e243883e")
                 .build();
