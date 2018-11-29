@@ -18,6 +18,7 @@ public abstract class Kurs {
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
 		pruefungBeginnen();
+		pruefungBewerten();
 	}
 	
 	public void pruefungBeginnen() {
@@ -34,10 +35,6 @@ public abstract class Kurs {
 		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
 			bestanden = true;
 			kursBeenden();
-		}
-		else {
-			kursWiederholen();
-			//TODO repeat test???
 		}
 	}
 	

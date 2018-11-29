@@ -1,6 +1,9 @@
 package main.java.ScientificComputingTheGame.model;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import main.java.ScientificComputingTheGame.model.AlleKurse.*;
+import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
 public class Semester {
 	private ArrayList<Kurs> kurse;
@@ -10,7 +13,6 @@ public class Semester {
 		id = semesterID;
 		kurse = getKurse(offeneKurse);
 		pruefungsPhaseBeginnen();
-		offeneKurse = offeneKurse();
 		semesterBeenden();
 	}
 	
@@ -21,7 +23,7 @@ public class Semester {
 			offeneKurse.add(new Analysis());
 			offeneKurse.add(new MKB());
 			offeneKurse.add(new ITSysteme1());
-			offeneKurse.add(waehleAWFach());
+//			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 2) {
 //			offeneKurse.add(new SoftwareEntwicklung2());
@@ -32,7 +34,12 @@ public class Semester {
 //			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 3) {
-			//TODO Kurse 3. Semester hinzufuegen
+//			offeneKurse.add(new NumerischeMathematik());
+//			offeneKurse.add(new OperationsResearch());
+//			offeneKurse.add(new Differentialrechnung());
+//			offeneKurse.add(new AlgorithmenUndDatenstrukturen);
+//			offeneKurse.add(new SoftwareEngineering());
+//			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
 		}
 		else if(id == 4) {
 			//TODO evtl. starte Praxissemester
@@ -55,18 +62,20 @@ public class Semester {
 	
 	public void pruefungsPhaseBeginnen() {
 		for(Kurs momentanePruefung: kurse) {
-			momentanePruefung.pruefungBeginnen();
-			if(momentanePruefung != null) {
-			momentanePruefung.pruefungBeginnen();
+			if (momentanePruefung != null) {
+				momentanePruefung.pruefungBeginnen();
 			}
 		}
 	}
 	
-	public ArrayList<Kurs> offeneKurse() {
-		for(Kurs momentanerKurs: kurse) {
-			if(momentanerKurs != null && momentanerKurs.getBestanden()) {
+	public ArrayList<Kurs> getOffeneKurse() {
+		Iterator<Kurs> iterator = kurse.iterator();
+		Kurs momentanerKurs;
+		while (iterator.hasNext()) {
+			momentanerKurs = iterator.next();
+			if(iterator != null && (momentanerKurs.getBestanden())) {
 				ScientificComputingTheGame.spieler.addECTS(momentanerKurs.getECTS());
-				kurse.remove(momentanerKurs);
+				iterator.remove();
 			}
 		}
 		return kurse;
