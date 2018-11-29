@@ -5,10 +5,11 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Analysis extends Kurs {
 	private String name = "Analysis";
-	private int anzahlZuBeantwortenderFragen = 2; // Wird hier nicht gesetzt aber warum?
+	private final int anzahlZuBeantwortenderFragen;
 
 	public Analysis() {
 		super();
+		anzahlZuBeantwortenderFragen = 2; 
 	}
 	
 	public ArrayList<Frage> getFragen() {
@@ -21,7 +22,7 @@ public class Analysis extends Kurs {
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
- 		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
 			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
