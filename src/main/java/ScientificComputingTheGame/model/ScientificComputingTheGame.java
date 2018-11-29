@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class ScientificComputingTheGame {
 	static Spieler spieler;
-	static String output = "Die Main wurde nicht ausgeführt";
 	public static ArrayList<Kurs> offeneKurse;
+	static String output = "Die Main wurde nicht ausgefuehrt";
+  
 	public static void main(String args[]) {
 		output = "Das Spiel wurde gestartet";
 		offeneKurse = new ArrayList<Kurs>();
