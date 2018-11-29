@@ -1,6 +1,9 @@
 package main.java.ScientificComputingTheGame.model;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import main.java.ScientificComputingTheGame.model.AlleKurse.*;
+import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
 public class Semester {
 	private ArrayList<Kurs> kurse;
@@ -10,7 +13,6 @@ public class Semester {
 		id = semesterID;
 		kurse = getKurse(offeneKurse);
 		pruefungsPhaseBeginnen();
-		offeneKurse = offeneKurse();
 		semesterBeenden();
 	}
 	
@@ -21,7 +23,7 @@ public class Semester {
 			offeneKurse.add(new Analysis());
 			offeneKurse.add(new MKB());
 			offeneKurse.add(new ITSysteme1());
-			offeneKurse.add(waehleAWFach());
+//			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 2) {
 //			offeneKurse.add(new SoftwareEntwicklung2());
@@ -60,19 +62,20 @@ public class Semester {
 	
 	public void pruefungsPhaseBeginnen() {
 		for(Kurs momentanePruefung: kurse) {
-			momentanePruefung.pruefungBeginnen();
-			if(momentanePruefung != null) {
-			momentanePruefung.pruefungBeginnen();
+			if (momentanePruefung != null) {
+				momentanePruefung.pruefungBeginnen();
 			}
 		}
 	}
 	
-	public ArrayList<Kurs> offeneKurse() {
-		for(Kurs momentanerKurs: kurse) {
-			if(momentanerKurs != null && momentanerKurs.getBestanden()) {
-				ScientificComputingTheGame.spieler.addECTS(momentanerKurs.getECTS());
-				kurse.remove(momentanerKurs);
-			}
+	public ArrayList<Kurs> getOffeneKurse() {
+		Iterator<Kurs> i1 = kurse.iterator();
+		while (i1.hasNext()) {
+		   Kurs s = i1.next();
+		   if(i1 != null && (s.getBestanden())) {
+			   ScientificComputingTheGame.spieler.addECTS(s.getECTS());
+			   i1.remove();
+		   }
 		}
 		return kurse;
 	}

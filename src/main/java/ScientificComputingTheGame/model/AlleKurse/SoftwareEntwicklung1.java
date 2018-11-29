@@ -5,10 +5,11 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEntwicklung1 extends Kurs {
 	private String name = "Software Entwicklung 1";
-	private int anzahlZuBeantwortenderFragen = 2;
+	private final int anzahlZuBeantwortenderFragen;
 
 	public SoftwareEntwicklung1() {
 		super();
+		anzahlZuBeantwortenderFragen = 2;
 	}
 	
 	public ArrayList<Frage> getFragen() {

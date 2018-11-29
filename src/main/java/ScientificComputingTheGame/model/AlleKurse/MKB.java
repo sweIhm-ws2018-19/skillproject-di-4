@@ -5,10 +5,11 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class MKB extends Kurs {
 	private String name = "Mathematische Konzepte und Beweise";
-	private int anzahlZuBeantwortenderFragen = 2;
+	private final int anzahlZuBeantwortenderFragen;
 
 	public MKB() {
 		super();
+		anzahlZuBeantwortenderFragen = 2;
 	}
 	
 	public ArrayList<Frage> getFragen() {

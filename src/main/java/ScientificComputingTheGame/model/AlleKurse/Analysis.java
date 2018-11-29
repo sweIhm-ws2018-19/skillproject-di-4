@@ -5,7 +5,7 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Analysis extends Kurs {
 	private String name = "Analysis";
-	private int anzahlZuBeantwortenderFragen;
+	private final int anzahlZuBeantwortenderFragen;
 
 	public Analysis() {
 		super();

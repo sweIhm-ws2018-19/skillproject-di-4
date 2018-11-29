@@ -5,10 +5,11 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class LineareAlgebra extends Kurs {
 	private String name = "Lineare Algebra";
-	private int anzahlZuBeantwortenderFragen = 2;
+	private final int anzahlZuBeantwortenderFragen;
 
 	public LineareAlgebra() {
 		super();
+		anzahlZuBeantwortenderFragen = 2;
 	}
 	
 	public ArrayList<Frage> getFragen() {
