@@ -14,10 +14,9 @@ public class LineareAlgebra extends Kurs {
 	
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
-				{"Dies ist Frage 1 aus Lineare Algebra. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-				{"Dies ist Frage 2 aus Lineare Algebra. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 3 aus Lineare Algebra. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 4 aus Lineare Algebra. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+				{"Was erhaelt man wenn man einen Zeilenvektor transponiert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "einen Spaltenvektor"}, 
+				{"Was erhaelt man wenn man einen Zeilenvektor mit einem Spaltenvektor multipliziert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "eine Matrix"},
+				{"Wofuer stehen L und U bei der L U zerlegung?", "Ludwig Unger Methode, Lower und Upper Matrix, Loewe und Uhu Matrix, Lettland und Ungarn", "Lower und Upper Matrix"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
