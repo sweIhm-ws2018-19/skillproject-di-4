@@ -69,13 +69,14 @@ public class Semester {
 	}
 	
 	public ArrayList<Kurs> getOffeneKurse() {
-		Iterator<Kurs> i1 = kurse.iterator();
-		while (i1.hasNext()) {
-		   Kurs s = i1.next();
-		   if(i1 != null && (s.getBestanden())) {
-			   ScientificComputingTheGame.spieler.addECTS(s.getECTS());
-			   i1.remove();
-		   }
+		Iterator<Kurs> iterator = kurse.iterator();
+		Kurs momentanerKurs;
+		while (iterator.hasNext()) {
+			momentanerKurs = iterator.next();
+			if(iterator != null && (momentanerKurs.getBestanden())) {
+				ScientificComputingTheGame.spieler.addECTS(momentanerKurs.getECTS());
+				iterator.remove();
+			}
 		}
 		return kurse;
 	}

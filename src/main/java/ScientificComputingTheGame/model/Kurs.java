@@ -36,10 +36,6 @@ public abstract class Kurs {
 			bestanden = true;
 			kursBeenden();
 		}
-		else {
-			kursWiederholen();
-			//TODO repeat test???
-		}
 	}
 	
 	protected void kursBeenden() {
