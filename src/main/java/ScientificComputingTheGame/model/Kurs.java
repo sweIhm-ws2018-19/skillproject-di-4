@@ -19,6 +19,7 @@ public abstract class Kurs {
 		fragen = getFragen();
 		pruefungBeginnen();
 		pruefungBewerten();
+	}
 	
 	public void pruefungBeginnen() {
 		for(Frage a: fragen) {

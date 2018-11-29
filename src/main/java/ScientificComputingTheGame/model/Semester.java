@@ -32,7 +32,12 @@ public class Semester {
 //			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 3) {
-			//TODO Kurse 3. Semester hinzufuegen
+//			offeneKurse.add(new NumerischeMathematik());
+//			offeneKurse.add(new OperationsResearch());
+//			offeneKurse.add(new Differentialrechnung());
+//			offeneKurse.add(new AlgorithmenUndDatenstrukturen);
+//			offeneKurse.add(new SoftwareEngineering());
+//			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
 		}
 		else if(id == 4) {
 			//TODO evtl. starte Praxissemester

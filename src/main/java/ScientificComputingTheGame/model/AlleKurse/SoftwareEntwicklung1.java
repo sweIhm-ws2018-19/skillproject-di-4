@@ -13,10 +13,14 @@ public class SoftwareEntwicklung1 extends Kurs {
 	
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
-				{"Dies ist Frage 1 aus Software Entwicklung 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-				{"Dies ist Frage 2 aus Software Entwicklung 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 3 aus Software Entwicklung 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 4 aus Software Entwicklung 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+				{"Mit dem Modifier final wird eine einzige Wertzuweisung an eine Variable akzeptiert. Jede weitere wird als Fehler abgelehnt. ", "Ja, Nein", "Ja"}, 
+				{"Selbstentwickelte Klassen sind in Java immer implizit von der Basisklasse java.lang.Object abgeleitet.", "Ja, Nein", "Ja"},
+				{"Was gibt die Methode int m int a zurück, wenn sie aufgerufen wird mit m()?", "Syntaxfehler, null, eine Exception, ein String Array", "A"},
+				{"Was kann die main Methode nicht?", "neue Objekte der eigenen Klasse anlegen, normale eigene Methoden aufrufen, Ein Interface implementieren, Variablen neue Werte zuweisen", "Ein Interface implementieren"},
+				{"Eine lokale Variable (einer Methode) muss definiert werden", "zu Beginn der Methode, an beliebiger Stelle im Methodenrumpf unabhängig von der Nutzung, vor der ersten Nutzung", "vor der ersten Nutzung"},
+				{"Der Operator ist gleich ist gleich vergleicht zwei Objekte hinsichtlich ihrer Identität.", "Ja, Nein", "Ja"},
+				{"Jede For Schleife kann in eine While Schleife umgewandelt werden.", "Ja, Nein", "Ja"},
+				{"Zwei Objekte sind identisch, wenn ihre Datenwerte übereinstimmen.", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;

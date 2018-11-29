@@ -5,10 +5,11 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Analysis extends Kurs {
 	private String name = "Analysis";
-	private int anzahlZuBeantwortenderFragen = 2; // Wird hier nicht gesetzt aber warum?
+	private int anzahlZuBeantwortenderFragen;
 
 	public Analysis() {
 		super();
+		anzahlZuBeantwortenderFragen = 2; 
 	}
 	
 	public ArrayList<Frage> getFragen() {
