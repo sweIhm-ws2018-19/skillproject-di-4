@@ -14,10 +14,10 @@ public class ITSysteme1 extends Kurs {
 	
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
-				{"Dies ist Frage 1 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-				{"Dies ist Frage 2 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 3 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 4 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 0 1 0", "18, 0, 215, 10", "10"},
+				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 1 1 1", "15, -7, 98, 8", "15"},
+				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? 12", "29, 18, 0, 178", "18"},
+				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? B", "29, 18, 11, 2", "11"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;

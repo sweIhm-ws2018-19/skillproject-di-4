@@ -31,4 +31,7 @@ public class ScientificComputingTheGame {
 	public ArrayList<Kurs> getOffeneKurse() {
 		return offeneKurse;
 	}
+	
+	;
+	
 }
