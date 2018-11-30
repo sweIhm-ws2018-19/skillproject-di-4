@@ -47,4 +47,12 @@ public class LineareAlgebra extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
+
+	public String getBeschreibung() {
+		return "Im Kurs Lineare Algebra lernen die Studierenden wichtige "
+				+ "grundlegende Begriffe und Methoden die sie unter anderem in der "
+				+ "Numerik benoetigen. Behandelt werden unter anderem Vektorraeume, "
+				+ "lineare Gleichungssysteme, Skalarprodukt, Eigenwerte und L U "
+				+ "Zerlegung.";
+	}
 }

@@ -12,6 +12,7 @@ public abstract class Kurs {
 	public abstract String getName();
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getECTS();
+	public abstract String getBeschreibung();
 
 	protected Kurs() {
 		bestanden = false;

@@ -43,4 +43,14 @@ public class ITSysteme1 extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
+
+	public String getBeschreibung() {
+		return "In IT Systeme 1 lernt man einiges ueber den Aufbau und die "
+				+ "Funktionsweisen moderner IT Systeme. Dabei werden unter anderm "
+				+ "die Themenbereiche Informationsdarstellung, einfache "
+				+ "Datenstrukturen, Ablaufsteuerung, Grundlagen der Programmierung "
+				+ "auf Maschinenebene und Informationsdarstellung behandelt. "
+				+ "Schliesslich sollen fundierte Kentnisse ueber den Aufbau und die "
+				+ "Gemeinsamkeiten moderner Computer erlangt werden.";
+	}
 }
