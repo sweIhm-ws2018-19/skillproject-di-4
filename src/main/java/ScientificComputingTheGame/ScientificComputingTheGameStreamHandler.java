@@ -11,10 +11,6 @@
      the specific language governing permissions and limitations under the License.
 */
 
-//
-
-//Das ist ein Kommentar für den Michi, beste Grüße aus Hogwarts
-
 package main.java.ScientificComputingTheGame;
 
 import com.amazon.ask.Skill;
