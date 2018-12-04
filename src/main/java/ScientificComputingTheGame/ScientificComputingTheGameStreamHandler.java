@@ -32,7 +32,6 @@ import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
-    	int Harry = 0;
     	ScientificComputingTheGame s = new ScientificComputingTheGame();
         return Skills.standard()
                 .addRequestHandlers(
