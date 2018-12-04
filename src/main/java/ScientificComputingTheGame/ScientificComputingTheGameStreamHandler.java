@@ -41,7 +41,7 @@ public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler 
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
-                        new FrageStellenIntentHandler(),
+                        new FrageStellenIntentHandler(s),
                         new WelcomeIntentHandler(s)
                         )
                 // Add your skill id below
