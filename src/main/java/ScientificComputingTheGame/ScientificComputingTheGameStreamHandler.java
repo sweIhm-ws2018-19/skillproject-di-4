@@ -13,7 +13,7 @@
 
 //
 
-//Das ist ein Kommentar für den Michi, beste Grüße aus Hogwarts
+//Das ist ein Kommentar fÃ¼r den Michi, beste GrÃ¼ÃŸe aus Hogwarts
 
 package main.java.ScientificComputingTheGame;
 
@@ -32,7 +32,6 @@ import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
-    	int Harry = 0;
     	ScientificComputingTheGame s = new ScientificComputingTheGame();
         return Skills.standard()
                 .addRequestHandlers(

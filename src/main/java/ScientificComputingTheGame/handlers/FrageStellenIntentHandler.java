@@ -10,6 +10,8 @@ import com.amazon.ask.model.Slot;
 
 
 import java.util.Map;
+
+
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
@@ -27,6 +29,7 @@ public class FrageStellenIntentHandler implements RequestHandler {
 		this.s = s;
 	}
 	
+
     @Override
     public boolean canHandle(HandlerInput input) {
 		return input.matches(intentName("FrageStellen"));
@@ -43,6 +46,7 @@ public class FrageStellenIntentHandler implements RequestHandler {
 		Slot kindOfQuestion = slots.get("Abfrage");
     	
         speechText = kindOfQuestion.getValue();
+
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
         return input.getResponseBuilder()
                 .withSimpleCard("FrageStellen", speechText)
