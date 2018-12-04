@@ -11,10 +11,6 @@
      the specific language governing permissions and limitations under the License.
 */
 
-//
-
-//Das ist ein Kommentar für den Michi, beste Grüße aus Hogwarts
-
 package main.java.ScientificComputingTheGame;
 
 import com.amazon.ask.Skill;
@@ -25,13 +21,13 @@ import main.java.ScientificComputingTheGame.handlers.HelpIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.LaunchRequestHandler;
 import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
 import main.java.ScientificComputingTheGame.handlers.WelcomeIntentHandler;
+import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
 
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
-    	int Harry = 0;
-
+    	ScientificComputingTheGame s = new ScientificComputingTheGame();
         return Skills.standard()
                 .addRequestHandlers(
                         new LaunchRequestHandler(),
@@ -39,7 +35,7 @@ public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler 
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
-                        new WelcomeIntentHandler())
+                        new WelcomeIntentHandler(s))
                 // Add your skill id below
                 .withSkillId("amzn1.ask.skill.6c52904c-e625-439f-bde3-4322e243883e")
                 .build();
