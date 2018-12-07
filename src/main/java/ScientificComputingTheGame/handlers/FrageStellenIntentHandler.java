@@ -15,10 +15,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
-import static com.amazon.ask.request.Predicates.requestType;
-import static com.amazon.ask.request.Predicates.intentName;
-import com.amazon.ask.response.ResponseBuilder;
-
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
 
@@ -50,7 +46,7 @@ public class FrageStellenIntentHandler implements RequestHandler {
 
 		
 		if (kindOfQuestion.getValue().equals("uebung")) {
-			speechText = s.getFrage(kurs.getValue());
+			speechText = ScientificComputingTheGame.getFrage(kurs.getValue());
 		} else {speechText = "!ERROR: Keine Frage gefunden!";}
     	
         //speechText = kindOfQuestion.getValue();

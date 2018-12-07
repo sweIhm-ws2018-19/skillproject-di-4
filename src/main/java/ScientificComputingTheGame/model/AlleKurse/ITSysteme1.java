@@ -12,6 +12,7 @@ public class ITSysteme1 extends Kurs {
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Dies ist Frage 1 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
@@ -32,14 +33,17 @@ public class ITSysteme1 extends Kurs {
 		return fragen;
 	}
 	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 5;
 	}

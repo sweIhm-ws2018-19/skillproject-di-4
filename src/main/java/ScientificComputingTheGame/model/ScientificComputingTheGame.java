@@ -41,6 +41,8 @@ public class ScientificComputingTheGame {
 	}
 	
 	public static String getFrage(String kursName) {
-		return spieler.getFrage(kursName);
+		String frage=spieler.getFrage(kursName);
+		System.out.println(frage);
+		return frage;
 	}
 }

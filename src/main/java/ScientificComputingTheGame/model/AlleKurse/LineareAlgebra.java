@@ -12,6 +12,7 @@ public class LineareAlgebra extends Kurs {
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Was erhaelt man wenn man einen Zeilenvektor transponiert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "einen Spaltenvektor"}, 
@@ -31,14 +32,17 @@ public class LineareAlgebra extends Kurs {
 		return fragen;
 	}
 	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 5;
 	}

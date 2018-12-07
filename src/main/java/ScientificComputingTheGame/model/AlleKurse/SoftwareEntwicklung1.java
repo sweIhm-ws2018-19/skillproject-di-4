@@ -12,6 +12,7 @@ public class SoftwareEntwicklung1 extends Kurs {
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Mit dem Modifier final wird eine einzige Wertzuweisung an eine Variable akzeptiert. Jede weitere wird als Fehler abgelehnt. ", "Ja, Nein", "Ja"}, 
@@ -36,14 +37,17 @@ public class SoftwareEntwicklung1 extends Kurs {
 		return fragen;
 	}
 	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 8;
 	}
