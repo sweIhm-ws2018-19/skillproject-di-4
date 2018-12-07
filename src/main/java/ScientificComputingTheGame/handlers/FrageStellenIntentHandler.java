@@ -49,7 +49,7 @@ public class FrageStellenIntentHandler implements RequestHandler {
 		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(kurs.getValue(), "Kurs"));
 
 		
-		if (kindOfQuestion.getValue().equals("übung")) {
+		if (kindOfQuestion.getValue().equals("uebung")) {
 			speechText = s.getFrage(kurs.getValue());
 		} else {speechText = "!ERROR: Keine Frage gefunden!";}
     	
