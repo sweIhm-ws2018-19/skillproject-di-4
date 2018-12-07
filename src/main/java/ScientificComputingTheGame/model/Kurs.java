@@ -24,8 +24,9 @@ public abstract class Kurs {
 	}
 	
 	public String getFrage() {
+		fragen=getFragen();
 		int next=fragen.size()-1;
-		System.out.println(next);
+		System.out.println(fragen);
 		Random r = new Random();
 		int pos=r.nextInt(next);
 		return fragen.get(pos).getFrage();
