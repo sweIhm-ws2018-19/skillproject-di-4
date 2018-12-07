@@ -1,6 +1,6 @@
 package main.java.ScientificComputingTheGame.model;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class Kurs {
 	private boolean bestanden;
@@ -17,8 +17,18 @@ public abstract class Kurs {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
-		pruefungBeginnen();
-		pruefungBewerten();
+		System.out.println(fragen.size());
+
+		//pruefungBeginnen();
+		//pruefungBewerten();
+	}
+	
+	public String getFrage() {
+		int next=fragen.size()-1;
+		System.out.println(next);
+		Random r = new Random();
+		int pos=r.nextInt(next);
+		return fragen.get(pos).getFrage();
 	}
 	
 	public void pruefungBeginnen() {

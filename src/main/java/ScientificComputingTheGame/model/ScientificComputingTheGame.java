@@ -6,12 +6,19 @@ public class ScientificComputingTheGame {
 	static Spieler spieler;
 	public static ArrayList<Kurs> offeneKurse;
 	static String output = "Die Main wurde nicht ausgefuehrt";
+	
+	//Fuer den FrageStellenIntentHandler:
+	
+	
   
 	public static void main(String args[]) {
 		output = "Das Spiel wurde gestartet";
 		offeneKurse = new ArrayList<Kurs>();
-		spieler = new Spieler();
-		studiumStarten();
+		spieler = new Spieler(1);
+		
+		//Eigentlich hier semester und nicht in Konstruktor von Spieler
+		System.out.println(getFrage("analysis"));
+		//studiumStarten();
 	}
 	
 	private static void studiumStarten() {
@@ -31,5 +38,9 @@ public class ScientificComputingTheGame {
 	
 	public ArrayList<Kurs> getOffeneKurse() {
 		return offeneKurse;
+	}
+	
+	public static String getFrage(String kursName) {
+		return spieler.getFrage(kursName);
 	}
 }

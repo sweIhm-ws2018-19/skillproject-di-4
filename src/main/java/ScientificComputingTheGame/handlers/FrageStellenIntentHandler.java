@@ -8,7 +8,7 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 
-
+import java.util.Collections;
 import java.util.Map;
 
 
@@ -44,8 +44,16 @@ public class FrageStellenIntentHandler implements RequestHandler {
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
 		Slot kindOfQuestion = slots.get("Abfrage");
+		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(kindOfQuestion.getValue(), "Abfrage"));
+		Slot kurs = slots.get("Kurs");
+		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(kurs.getValue(), "Kurs"));
+
+		
+		if (kindOfQuestion.getValue().equals("übung")) {
+			speechText = s.getFrage(kurs.getValue());
+		} else {speechText = "!ERROR: Keine Frage gefunden!";}
     	
-        speechText = kindOfQuestion.getValue();
+        //speechText = kindOfQuestion.getValue();
 
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
         return input.getResponseBuilder()
