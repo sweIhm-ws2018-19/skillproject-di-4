@@ -17,7 +17,6 @@ public abstract class Kurs {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
-		System.out.println(fragen.size());
 
 		//pruefungBeginnen();
 		//pruefungBewerten();
@@ -26,7 +25,6 @@ public abstract class Kurs {
 	public String getFrage() {
 		fragen=getFragen();
 		int next=fragen.size()-1;
-		System.out.println(fragen);
 		Random r = new Random();
 		int pos=r.nextInt(next);
 		return fragen.get(pos).getFrage();

@@ -17,7 +17,7 @@ public class ScientificComputingTheGame {
 		spieler = new Spieler(1);
 		
 		//Eigentlich hier semester und nicht in Konstruktor von Spieler
-		System.out.println(getFrage("analysis"));
+		//System.out.println(getFrage("analysis"));
 		//studiumStarten();
 	}
 	
@@ -42,7 +42,7 @@ public class ScientificComputingTheGame {
 	
 	public static String getFrage(String kursName) {
 		String frage=spieler.getFrage(kursName);
-		System.out.println(frage);
+		//System.out.println(frage);
 		return frage;
 	}
 }
