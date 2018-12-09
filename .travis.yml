@@ -14,3 +14,15 @@ script:
  
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
   - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
+
+
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: ff0a081293a30e625ef806bb453e449c18501402 # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
