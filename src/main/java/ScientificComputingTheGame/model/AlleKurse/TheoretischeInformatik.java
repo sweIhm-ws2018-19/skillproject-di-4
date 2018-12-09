@@ -43,6 +43,8 @@ public class TheoretischeInformatik extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return "Das Ziel des Faches Theoretische Informatik ist es den Studierenden "
+				+ "eine Einfuehrung in Automatentheorie, formale Spracehn und "
+				+ "Berechenbarkeitstheorie zu geben.";
 	}
 }

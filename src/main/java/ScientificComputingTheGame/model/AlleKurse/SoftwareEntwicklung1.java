@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEntwicklung1 extends Kurs {
-	private String name = "Software Entwicklung 1";
+	private String name = "Softwareentwicklung 1";
 	private final int anzahlZuBeantwortenderFragen;
 
 	public SoftwareEntwicklung1() {

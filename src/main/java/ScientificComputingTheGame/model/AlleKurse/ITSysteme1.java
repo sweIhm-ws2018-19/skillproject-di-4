@@ -45,7 +45,7 @@ public class ITSysteme1 extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "In IT Systeme 1 lernt man einiges ueber den Aufbau und die "
+		return "In IT Systeme 1 lernt man Grundlagen ueber den Aufbau und die "
 				+ "Funktionsweisen moderner IT Systeme. Dabei werden unter anderm "
 				+ "die Themenbereiche Informationsdarstellung, einfache "
 				+ "Datenstrukturen, Ablaufsteuerung, Grundlagen der Programmierung "

@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEntwicklung2 extends Kurs {
-	private String name = "Software Entwicklung 2";
+	private String name = "Softwareentwicklung 2";
 	private final int anzahlZuBeantwortenderFragen;
 
 	public SoftwareEntwicklung2() {
@@ -43,6 +43,9 @@ public class SoftwareEntwicklung2 extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return "In Softwareentwicklung 2 vertiefen die Studierenden ihre Kentnisse "
+				+ "ueber Java. Unter anderem sind Ein und Ausgaben, Collections, "
+				+ "Rekursion, Netzwerkprogrammierung und Java Generics Themen der "
+				+ "Veranstaltung.";
 	}
 }

@@ -43,6 +43,8 @@ public class ITSysteme2 extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return "In IT Systeme 2 werden die in IT Systeme 2 erlangten Grundlagen "
+				+ "vertieft. Des weiteren kommen Unterprogramme im BIOS des MMIX "
+				+ "Microprozessors als neues Themengebiet hinzu.";
 	}
 }
