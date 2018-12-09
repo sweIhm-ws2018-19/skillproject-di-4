@@ -7,8 +7,29 @@ public class ScientificComputingTheGame {
 	public static ArrayList<Kurs> offeneKurse;
 	static String output = "Die Main wurde nicht ausgefuehrt";
 	public static Frage gestellteFrage;
+	public static int anzahlGestellterFragen=0;
+	public static int anzahlRichtigBeantworteterFragen=0;
+	public static boolean istPruefungsFrage = false;
 	
 	//Fuer den FrageStellenIntentHandler:
+	public static int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	public static int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+	public static boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+	public static void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+	public static void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen=value;
+	}
+	public static void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage=value;
+	}
 	
 	
   

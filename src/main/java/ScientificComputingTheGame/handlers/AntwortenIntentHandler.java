@@ -43,16 +43,21 @@ public class AntwortenIntentHandler implements RequestHandler {
 		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(possibleAnswer.getValue(), "Antwort"));
 		
 		if(possibleAnswer.getValue() != null) {
-			if (possibleAnswer.getValue().equals(s.getAntwort().getAntwort())) {
-				speechText = "Deine Antwort war richtig. Moechtest du mit der naechsten Frage fortfahren?";
-			} else {speechText = "Deine Antwort war falsch. Moechtest du mit der naechsten Frage fortfahren?";}
+			if (possibleAnswer.getValue().toLowerCase().equals(ScientificComputingTheGame.getAntwort().getAntwort().toLowerCase())) {
+				
+				if(ScientificComputingTheGame.istPruefungsFrage) {
+					ScientificComputingTheGame.anzahlRichtigBeantworteterFragen++;
+					ScientificComputingTheGame.istPruefungsFrage=false;
+				}
+				
+				speechText = "Deine Antwort war richtig. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";
+			} else {speechText = "Deine Antwort war falsch. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";}
 		}
 		
-        //speechText = kindOfQuestion.getValue();
 
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
         return input.getResponseBuilder()
-                .withSimpleCard("FrageStellen", speechText)
+                .withSimpleCard("Antworten", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .withShouldEndSession(false)
