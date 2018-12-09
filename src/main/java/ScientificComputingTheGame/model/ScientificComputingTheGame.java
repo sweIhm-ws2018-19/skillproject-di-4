@@ -6,6 +6,7 @@ public class ScientificComputingTheGame {
 	static Spieler spieler;
 	public static ArrayList<Kurs> offeneKurse;
 	static String output = "Die Main wurde nicht ausgefuehrt";
+	public static Frage gestellteFrage;
 	
 	//Fuer den FrageStellenIntentHandler:
 	
@@ -41,8 +42,14 @@ public class ScientificComputingTheGame {
 	}
 	
 	public static String getFrage(String kursName) {
-		String frage=spieler.getFrage(kursName);
+		Frage frage = spieler.getFrage(kursName);
+		gestellteFrage = frage;
+		String text=frage.getFrage();
 		//System.out.println(frage);
-		return frage;
+		return text;
+	}
+	
+	public static Frage getAntwort() {
+		return gestellteFrage;
 	}
 }

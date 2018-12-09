@@ -22,12 +22,12 @@ public abstract class Kurs {
 		//pruefungBewerten();
 	}
 	
-	public String getFrage() {
+	public Frage getFrage() {
 		fragen=getFragen();
 		int next=fragen.size()-1;
 		Random r = new Random();
 		int pos=r.nextInt(next);
-		return fragen.get(pos).getFrage();
+		return fragen.get(pos);
 	}
 	
 	public void pruefungBeginnen() {

@@ -82,14 +82,14 @@ public class Semester {
 		return kurse;
 	}
 	
-	public String getFrage(String kursName) {
+	public Frage getFrage(String kursName) {
 		Kurs richtigerKurs = null;
 		for (Kurs k: kurse) {
 			if(k.getName().toLowerCase().equals(kursName)) {
 				richtigerKurs=k;
 			}
 		}
-		if (richtigerKurs==null) {return "!ERROR: Kurs wurde nicht gefunden!";}
+		if (richtigerKurs==null) {return null;}
 		return richtigerKurs.getFrage();
 	}
 	

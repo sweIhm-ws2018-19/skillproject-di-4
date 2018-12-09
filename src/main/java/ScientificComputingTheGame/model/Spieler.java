@@ -27,7 +27,7 @@ public class Spieler {
 		return null;
 	}*/
 	
-	public String getFrage(String kursName) {
+	public Frage getFrage(String kursName) {
 		return fSemester.getFrage(kursName);
 	}
 

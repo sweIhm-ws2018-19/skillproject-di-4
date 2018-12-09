@@ -2,118 +2,157 @@
     "interactionModel": {
         "languageModel": {
             "invocationName": "sctg",
-            "intents": [
+          "intents": [
+            {
+              "name": "welcome",
+              "slots": [],
+              "samples": [
+                "starten"
+              ]
+            },
+            {
+              "name": "CreditsIntent",
+              "slots": [],
+              "samples": [
+                "credits"
+              ]
+            },
+            {
+              "name": "AntwortenIntent",
+              "slots": [
                 {
-                    "name": "welcome",
-                    "slots": [],
-                    "samples": [
-                        "starten"
-                    ]
-                },
-                {
-                    "name": "CreditsIntent",
-                    "slots": [],
-                    "samples": [
-                        "credits"
-                    ]
-                },
-                {
-                    "name": "UnknownIntent",
-                    "slots": [],
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": [
-                        "halt"
-                    ]
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": [
-                        "hilfe"
-                    ]
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": [
-                        "stop"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": [
-                        "nach hause"
-                    ]
-                },
-                {
-                    "name": "FrageStellen",
-                    "slots": [
-                        {
-                            "name": "Abfrage",
-                            "type": "KIND_OF_QUESTIONS"
-                        },
-                        {
-                            "name": "Kurs",
-                            "type": "COURSES"
-                        }
-                    ],
-                    "samples": [
-                        "{Abfrage} aus {Kurs}"
-                    ]
+                  "name": "Antwort",
+                  "type": "POSSIBLE_ANSWERS"
                 }
-            ],
-            "types": [
-              {
-                "name": "KIND_OF_QUESTIONS",
-                "values": [
-                  {
-                    "name": {
-                      "value": "prufung"
-                    }
-                  },
-                  {
-                    "name": {
-                      "value": "ubung"
-                    }
+              ],
+              "samples": [
+                "Die Antwort ist {Antwort}",
+                "{Antwort}"
+              ]
+            },
+            {
+              "name": "UnknownIntent",
+              "slots": [],
+              "samples": []
+            },
+            {
+              "name": "AMAZON.FallbackIntent",
+              "samples": []
+            },
+            {
+              "name": "AMAZON.CancelIntent",
+              "samples": [
+                "halt"
+              ]
+            },
+            {
+              "name": "AMAZON.HelpIntent",
+              "samples": [
+                "hilfe"
+              ]
+            },
+            {
+              "name": "AMAZON.StopIntent",
+              "samples": [
+                "stop"
+              ]
+            },
+            {
+              "name": "AMAZON.NavigateHomeIntent",
+              "samples": [
+                "nach hause"
+              ]
+            },
+            {
+              "name": "FrageStellen",
+              "slots": [
+                {
+                  "name": "Abfrage",
+                  "type": "KIND_OF_QUESTIONS"
+                },
+                {
+                  "name": "Kurs",
+                  "type": "COURSES"
+                }
+              ],
+              "samples": [
+                "{Abfrage} aus {Kurs}",
+                "{Abfrage} {Kurs}"
+              ]
+            }
+          ],
+          "types": [
+            {
+              "name": "KIND_OF_QUESTIONS",
+              "values": [
+                {
+                  "name": {
+                    "value": "pruefung"
                   }
-                ]
-              },
+                },
                 {
-                    "name": "COURSES",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "analysis"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "lineare algebra"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "softwareentwicklung eins"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "it-systeme"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "mathematische konzepte und beweise"
-                            }
-                        }
-                    ]
+                  "name": {
+                    "value": "uebung"
+                  }
                 }
-            ]
+              ]
+            },
+            {
+              "name": "POSSIBLE_ANSWERS",
+              "values": [
+                {
+                  "name": {
+                    "value": "A"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "B"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "C"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "D"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "COURSES",
+              "values": [
+                {
+                  "name": {
+                    "value": "analysis"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "lineare algebra"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "softwareentwicklung eins"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "it-systeme"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "mathematische konzepte und beweise"
+                  }
+                }
+              ]
+            }
+          ]
         }
     }
 }

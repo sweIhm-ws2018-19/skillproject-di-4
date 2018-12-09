@@ -18,17 +18,17 @@ import static com.amazon.ask.request.Predicates.intentName;
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
 
-public class FrageStellenIntentHandler implements RequestHandler {
+public class AntwortenIntentHandler implements RequestHandler {
 	
 	ScientificComputingTheGame s;
-	public FrageStellenIntentHandler(ScientificComputingTheGame s) {
+	public AntwortenIntentHandler(ScientificComputingTheGame s) {
 		this.s = s;
 	}
 	
 
     @Override
     public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("FrageStellen"));
+		return input.matches(intentName("AntwortenIntent"));
     }
 
     @Override
@@ -39,16 +39,15 @@ public class FrageStellenIntentHandler implements RequestHandler {
 		IntentRequest intentRequest = (IntentRequest) request;
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
-		Slot kindOfQuestion = slots.get("Abfrage");
-		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(kindOfQuestion.getValue(), "Abfrage"));
-		Slot kurs = slots.get("Kurs");
-		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(kurs.getValue(), "Kurs"));
-
+		Slot possibleAnswer = slots.get("Antwort");
+		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(possibleAnswer.getValue(), "Antwort"));
 		
-		if (kindOfQuestion.getValue().equals("uebung")) {
-			speechText = ScientificComputingTheGame.getFrage(kurs.getValue())+" Bitte sage nun 'Die Antwort ist ' und nenne danach den Buchstaben der richtigen Antwort.";
-		} else {speechText = "!ERROR: Keine Frage gefunden!";}
-    	
+		if(possibleAnswer.getValue() != null) {
+			if (possibleAnswer.getValue().equals(s.getAntwort().getAntwort())) {
+				speechText = "Deine Antwort war richtig. Moechtest du mit der naechsten Frage fortfahren?";
+			} else {speechText = "Deine Antwort war falsch. Moechtest du mit der naechsten Frage fortfahren?";}
+		}
+		
         //speechText = kindOfQuestion.getValue();
 
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
