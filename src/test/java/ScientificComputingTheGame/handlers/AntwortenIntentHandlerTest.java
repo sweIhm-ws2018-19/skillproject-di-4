@@ -6,7 +6,7 @@ class AntwortenIntentHandlerTest {
 
 	@Test
 	void testAntwortenIntentHandler() {
-		
+		//TODO mock?
 	}
 
 }

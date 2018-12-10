@@ -1,19 +1,11 @@
-package test.main.java.ScientificComputingTheGame.handlers;
+package test.java.ScientificComputingTheGame.handlers;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.*;
 
 class FrageStellenIntentHandlerTest {
 
 	@Test
 	void testCanHandle() {
-		fail("Not yet implemented");
+		//TODO mock?
 	}
-
-	@Test
-	void testHandle() {
-		fail("Not yet implemented");
-	}
-
 }
