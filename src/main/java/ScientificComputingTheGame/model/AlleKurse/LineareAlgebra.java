@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class LineareAlgebra extends Kurs {
-	private String name = "Lineare Algebra";
+	private String name = "LineareAlgebra";
 	private final int anzahlZuBeantwortenderFragen;
 
 	public LineareAlgebra() {
@@ -12,6 +12,7 @@ public class LineareAlgebra extends Kurs {
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Was erhaelt man wenn man einen Zeilenvektor transponiert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "einen Spaltenvektor"}, 
@@ -21,7 +22,7 @@ public class LineareAlgebra extends Kurs {
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while(fragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
 			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
@@ -31,14 +32,48 @@ public class LineareAlgebra extends Kurs {
 		return fragen;
 	}
 	
+	
+	@Override
+	public int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	
+	@Override
+	public int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+
+	@Override
+	public boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+
+	@Override
+	public void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+
+	@Override
+	public void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen = value;
+	}
+
+	@Override
+	public void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage = value;
+	}
+	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 5;
 	}

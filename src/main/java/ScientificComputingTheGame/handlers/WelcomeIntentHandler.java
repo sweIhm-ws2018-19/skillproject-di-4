@@ -24,6 +24,7 @@ public class WelcomeIntentHandler implements RequestHandler{
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		//ScientificComputingTheGame s = new ScientificComputingTheGame();
+
 		ScientificComputingTheGame.main(null);
 		String speechText = s.getOutput()+". Du bist jetzt im ersten Semester. Deine Kurse fuer dieses Semester sind: \n "
 				+ "Softwareentwicklung 1, IT-Systeme 1, Lineare Algebra, Analysis und Mathematische Konzepte und Beweise.\n"

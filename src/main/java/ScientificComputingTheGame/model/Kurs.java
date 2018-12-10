@@ -1,6 +1,6 @@
 package main.java.ScientificComputingTheGame.model;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class Kurs {
 	private boolean bestanden;
@@ -12,13 +12,34 @@ public abstract class Kurs {
 	public abstract String getName();
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getECTS();
+	
+	public int anzahlGestellterFragen=0;
+	public int anzahlRichtigBeantworteterFragen=0;
+	public boolean istPruefungsFrage = false;
+	
+	//Fuer den FrageStellenIntentHandler:
+	public abstract int getAnzahlGestellterFragen();
+	public abstract int getAnzahlRichtigBeantworteterFragen();
+	public abstract boolean getIstPruefungsFrage();
+	public abstract void setAnzahlGestellterFragen(int value);
+	public abstract void setAnzahlRichtigBeantworteterFragen(int value);
+	public abstract void setIstPruefungsFrage(boolean value);
 
 	protected Kurs() {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
-		pruefungBeginnen();
-		pruefungBewerten();
+
+		//pruefungBeginnen();
+		//pruefungBewerten();
+	}
+	
+	public Frage getFrage() {
+		fragen=getFragen();
+		int next=fragen.size()-1;
+		Random r = new Random();
+		int pos=r.nextInt(next);
+		return fragen.get(pos);
 	}
 	
 	public void pruefungBeginnen() {

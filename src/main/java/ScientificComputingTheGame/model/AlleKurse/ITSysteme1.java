@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class ITSysteme1 extends Kurs {
-	private String name = "IT-Systeme 1";
+	private String name = "ITSysteme1";
 	private final int anzahlZuBeantwortenderFragen;
 
 	public ITSysteme1() {
@@ -12,6 +12,7 @@ public class ITSysteme1 extends Kurs {
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Dies ist Frage 1 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
@@ -22,7 +23,7 @@ public class ITSysteme1 extends Kurs {
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while(fragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
 			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
@@ -32,14 +33,47 @@ public class ITSysteme1 extends Kurs {
 		return fragen;
 	}
 	
+	@Override
+	public int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	
+	@Override
+	public int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+
+	@Override
+	public boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+
+	@Override
+	public void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+
+	@Override
+	public void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen = value;
+	}
+
+	@Override
+	public void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage = value;
+	}
+	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 5;
 	}
