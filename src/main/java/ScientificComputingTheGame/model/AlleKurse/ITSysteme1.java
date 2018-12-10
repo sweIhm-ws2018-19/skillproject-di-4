@@ -4,8 +4,14 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class ITSysteme1 extends Kurs {
-	private String name = "IT-Systeme 1";
+	public static String name = "IT-Systeme 1";
 	private final int anzahlZuBeantwortenderFragen;
+	public static String[][] alleFragen = {
+			{"Dies ist Frage 1 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
+			{"Dies ist Frage 2 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 3 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 4 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+	
 
 	public ITSysteme1() {
 		super();
@@ -14,11 +20,6 @@ public class ITSysteme1 extends Kurs {
 	
 	@Override
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Dies ist Frage 1 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-				{"Dies ist Frage 2 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 3 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 4 aus IT-Systeme 1. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
