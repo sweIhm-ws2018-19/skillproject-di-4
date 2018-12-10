@@ -12,6 +12,18 @@ public abstract class Kurs {
 	public abstract String getName();
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getECTS();
+	
+	public int anzahlGestellterFragen=0;
+	public int anzahlRichtigBeantworteterFragen=0;
+	public boolean istPruefungsFrage = false;
+	
+	//Fuer den FrageStellenIntentHandler:
+	public abstract int getAnzahlGestellterFragen();
+	public abstract int getAnzahlRichtigBeantworteterFragen();
+	public abstract boolean getIstPruefungsFrage();
+	public abstract void setAnzahlGestellterFragen(int value);
+	public abstract void setAnzahlRichtigBeantworteterFragen(int value);
+	public abstract void setIstPruefungsFrage(boolean value);
 
 	protected Kurs() {
 		bestanden = false;

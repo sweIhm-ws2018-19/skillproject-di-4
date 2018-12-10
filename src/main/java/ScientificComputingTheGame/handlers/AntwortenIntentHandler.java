@@ -45,14 +45,14 @@ public class AntwortenIntentHandler implements RequestHandler {
 		if(possibleAnswer.getValue() != null) {
 			if (possibleAnswer.getValue().toLowerCase().equals(ScientificComputingTheGame.getAntwort().getAntwort().toLowerCase())) {
 				
-				if(s.istPruefungsFrage) {
-					s.anzahlRichtigBeantworteterFragen++;
-					s.istPruefungsFrage=false;
+				if(s.kursDerFrage.istPruefungsFrage) {
+					s.kursDerFrage.anzahlRichtigBeantworteterFragen++;
+					s.kursDerFrage.istPruefungsFrage=false;
 				}
 				
 				speechText = "Deine Antwort war richtig. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";
 			} else {
-				s.istPruefungsFrage=false;
+				s.kursDerFrage.istPruefungsFrage=false;
 				speechText = "Deine Antwort war falsch. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";
 				}
 		}

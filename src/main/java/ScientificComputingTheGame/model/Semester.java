@@ -82,7 +82,7 @@ public class Semester {
 		return kurse;
 	}
 	
-	public Frage getFrage(String kursName) {
+	public Kurs getFrage(String kursName) {
 		Kurs richtigerKurs = null;
 		for (Kurs k: kurse) {
 			if(k.getName().toLowerCase().equals(kursName.toLowerCase())) {
@@ -90,7 +90,7 @@ public class Semester {
 			}
 		}
 		if (richtigerKurs==null) {return null;}
-		return richtigerKurs.getFrage();
+		return richtigerKurs;
 	}
 	
 	private void semesterBeenden() {

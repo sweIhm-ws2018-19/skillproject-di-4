@@ -12,6 +12,7 @@ public class Analysis extends Kurs {
 		anzahlZuBeantwortenderFragen = 2; 
 	}
 	
+	
 	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
@@ -32,6 +33,42 @@ public class Analysis extends Kurs {
 			}
 		return fragen;
 	}
+	
+	@Override
+	public int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	
+	@Override
+	public int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+
+	@Override
+	public boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+
+	@Override
+	public void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+
+	@Override
+	public void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen = value;
+	}
+
+	@Override
+	public void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage = value;
+	}
+
+	
+	
+	
+	
+	
 	
 	@Override
 	public String getName() {

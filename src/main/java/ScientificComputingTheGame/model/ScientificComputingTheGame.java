@@ -7,29 +7,30 @@ public class ScientificComputingTheGame {
 	public static ArrayList<Kurs> offeneKurse;
 	static String output = "Die Main wurde nicht ausgefuehrt";
 	public static Frage gestellteFrage;
-	public static int anzahlGestellterFragen=0;
-	public static int anzahlRichtigBeantworteterFragen=0;
-	public static boolean istPruefungsFrage = false;
+	public static Kurs kursDerFrage;
+//	public static int anzahlGestellterFragen=0;
+//	public static int anzahlRichtigBeantworteterFragen=0;
+//	public static boolean istPruefungsFrage = false;
 	
-	//Fuer den FrageStellenIntentHandler:
-	public static int getAnzahlGestellterFragen() {
-		return anzahlGestellterFragen;
-	}
-	public static int getAnzahlRichtigBeantworteterFragen() {
-		return anzahlRichtigBeantworteterFragen;
-	}
-	public static boolean getIstPruefungsFrage() {
-		return istPruefungsFrage;
-	}
-	public static void setAnzahlGestellterFragen(int value) {
-		anzahlGestellterFragen=value;
-	}
-	public static void setAnzahlRichtigBeantworteterFragen(int value) {
-		anzahlRichtigBeantworteterFragen=value;
-	}
-	public static void setIstPruefungsFrage(boolean value) {
-		istPruefungsFrage=value;
-	}
+//	//Fuer den FrageStellenIntentHandler:
+//	public static int getAnzahlGestellterFragen() {
+//		return anzahlGestellterFragen;
+//	}
+//	public static int getAnzahlRichtigBeantworteterFragen() {
+//		return anzahlRichtigBeantworteterFragen;
+//	}
+//	public static boolean getIstPruefungsFrage() {
+//		return istPruefungsFrage;
+//	}
+//	public static void setAnzahlGestellterFragen(int value) {
+//		anzahlGestellterFragen=value;
+//	}
+//	public static void setAnzahlRichtigBeantworteterFragen(int value) {
+//		anzahlRichtigBeantworteterFragen=value;
+//	}
+//	public static void setIstPruefungsFrage(boolean value) {
+//		istPruefungsFrage=value;
+//	}
 	
 	
   
@@ -63,9 +64,9 @@ public class ScientificComputingTheGame {
 	}
 	
 	public static String getFrage(String kursName) {
-		Frage frage = spieler.getFrage(kursName);
-		gestellteFrage = frage;
-		String text=frage.getFrage();
+		kursDerFrage = spieler.getFrage(kursName);
+		gestellteFrage = kursDerFrage.getFrage();
+		String text=gestellteFrage.getFrage();
 		return text;
 	}
 	
