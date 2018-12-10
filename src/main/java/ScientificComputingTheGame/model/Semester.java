@@ -85,7 +85,7 @@ public class Semester {
 	public Frage getFrage(String kursName) {
 		Kurs richtigerKurs = null;
 		for (Kurs k: kurse) {
-			if(k.getName().toLowerCase().equals(kursName)) {
+			if(k.getName().toLowerCase().equals(kursName.toLowerCase())) {
 				richtigerKurs=k;
 			}
 		}

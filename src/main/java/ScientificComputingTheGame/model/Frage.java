@@ -14,7 +14,7 @@ public class Frage {
 	}
 	
 	public String getFrage() {
-		return fragenText+" "+moeglicheLoesungen;
+		return fragenText+" Die Antwortmoeglichkeiten sind: "+moeglicheLoesungen;
 	}
 	
 	public String getAntwort() {
