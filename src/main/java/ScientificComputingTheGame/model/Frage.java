@@ -13,6 +13,14 @@ public class Frage {
 		richtigeLoesung = neueFrage[2];
 	}
 	
+	public String getFrage() {
+		return fragenText+" "+moeglicheLoesungen;
+	}
+	
+	public String getAntwort() {
+		return richtigeLoesung;
+	}
+	
 	public void frageStellen() {
 		//TODO Alexa says fragenText und moeglicheLoesungen
 	}
