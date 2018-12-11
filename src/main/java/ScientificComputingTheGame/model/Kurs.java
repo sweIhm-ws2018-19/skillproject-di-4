@@ -8,8 +8,6 @@ public abstract class Kurs {
 	protected ArrayList<Frage> fragen;
 	private String momentaneAntwort;
 	
-	
-	
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getAnzahlGestellterFragen();
 	public abstract int getAnzahlRichtigBeantworteterFragen();

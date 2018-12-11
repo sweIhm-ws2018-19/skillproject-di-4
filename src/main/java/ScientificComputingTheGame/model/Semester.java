@@ -17,35 +17,33 @@ public class Semester {
 	}
 	
 	public ArrayList<Kurs> getKurse(ArrayList<Kurs> offeneKurse) {
-		if(id == 1) {
+		switch(id) {
+		case 1:
 			offeneKurse.add(new SoftwareEntwicklung1());
 			offeneKurse.add(new LineareAlgebra());
 			offeneKurse.add(new Analysis());
 			offeneKurse.add(new MKB());
 			offeneKurse.add(new ITSysteme1());
-
 //			offeneKurse.add(waehleAWFach());
-		}
-		else if(id == 2) {
+			break;
+		case 2:
 			offeneKurse.add(new SoftwareEntwicklung2());
 			offeneKurse.add(new DiskreteMathematik());
 			offeneKurse.add(new AngewandteMathematik());
 			offeneKurse.add(new ITSysteme2());
 			offeneKurse.add(new TheoretischeInformatik());
-//			offeneKurse.add(waehleAWFach());
-		}
-		else if(id == 3) {
+	//		offeneKurse.add(waehleAWFach());
+			break;
+		case 3:
 			offeneKurse.add(new NumerischeMathematik());
 			offeneKurse.add(new OperationsResearch());
 			offeneKurse.add(new Differentialrechnung());
 			offeneKurse.add(new AlgorithmenUndDatenstrukturen());
 			offeneKurse.add(new SoftwareEngineering());
 			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
-		}
-		else if(id == 4) {
+		case 4:
 			//TODO evtl. starte Praxissemester
-		}
-		else if(id == 5) {
+		case 5:
 			//TODO evtl. starte Auslandssemester
 		}
 		return offeneKurse;

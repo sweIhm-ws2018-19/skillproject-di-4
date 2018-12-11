@@ -29,6 +29,7 @@ public class AlgorithmenUndDatenstrukturen extends Kurs {
 			}
 		return fragen;
 	}
+	
 	@Override
 	public int getAnzahlGestellterFragen() {
 		return anzahlGestellterFragen;
