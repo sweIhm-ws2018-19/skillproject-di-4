@@ -17,7 +17,12 @@ public class LineareAlgebra extends Kurs {
 		String[][] alleFragen = {
 				{"Was erhaelt man wenn man einen Zeilenvektor transponiert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "einen Spaltenvektor"}, 
 				{"Was erhaelt man wenn man einen Zeilenvektor mit einem Spaltenvektor multipliziert?", "einen Zeilenvektor, einen Spaltenvektor, eine Matrix, die Einheitsmatrix", "eine Matrix"},
-				{"Wofuer stehen L und U bei der L U zerlegung?", "Ludwig Unger Methode, Lower und Upper Matrix, Loewe und Uhu Matrix, Lettland und Ungarn", "Lower und Upper Matrix"}};
+				{"Wofuer stehen L und U bei der L U zerlegung?", "Ludwig Unger Methode, Lower und Upper Matrix, Loewe und Uhu Matrix, Lettland und Ungarn", "Lower und Upper Matrix"},
+				{"Was ist der Rang einer Matrix?", "Die Anzahl der Zeilen, Die Anzahl der Spalten, Die Anzahl der Zeilen, Die Anzahl der liear unabhaengigen Zeilen und Spalten", "Die Anzahl der Zeilen, Die Anzahl der liear unabhaengigen Zeilen und Spalten"},
+				{"Was ist die Determinante der 4 Kreuz 4 Einheitsmatix?", "4, 1, 16, 0", "1"},
+				{"Was ist das quadrat der komplexen Zahl i?", "minus 1, 1, 0, nicht definiert", "minus 1"},
+				{"Gegeben ist das Gleichungssystem 3 mal x plus 2 y ist gleich 10 und 6 mal x plus 4 mal y ist gleich z. Fuer welchen Wert von z hat das System keine Loesung?", "", "10"},
+				{"Gegeben ist das Gleichungssystem 3 mal x plus 2 y ist gleich 10 und 6 mal x plus 4 mal y ist gleich z. Fuer welchen Wert von z hat das System unendlich viele Loesungen?", "", "10"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -76,5 +81,13 @@ public class LineareAlgebra extends Kurs {
 	@Override
 	public int getECTS() {
 		return 5;
+	}
+
+	public String getBeschreibung() {
+		return "Im Kurs Lineare Algebra lernen die Studierenden wichtige "
+				+ "grundlegende Begriffe und Methoden die sie unter anderem in der "
+				+ "Numerik benoetigen. Behandelt werden unter anderem Vektorraeume, "
+				+ "lineare Gleichungssysteme, Skalarprodukt, Eigenwerte und L U "
+				+ "Zerlegung.";
 	}
 }

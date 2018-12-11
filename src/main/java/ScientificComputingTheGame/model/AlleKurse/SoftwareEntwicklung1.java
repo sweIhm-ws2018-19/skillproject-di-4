@@ -4,6 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEntwicklung1 extends Kurs {
+
 	private String name = "SoftwareEntwicklung1";
 	private final int anzahlZuBeantwortenderFragen;
 
@@ -82,5 +83,14 @@ public class SoftwareEntwicklung1 extends Kurs {
 	@Override
 	public int getECTS() {
 		return 8;
+	}
+
+	public String getBeschreibung() {
+		return "In Softwareentwicklung 1 erhalten die Studierenden eine Einfuehrung "
+				+ "in die Programmiersprache Java. In mehreren Abgaben und "
+				+ "Uebungsprojekten werden Schleifen, primitive Datentypen, "
+				+ "Klassen, Methoden und Vererbung eingeuebt. Schliesslich koennen "
+				+ "die Studierenden das Erworbene Grundwissen ueber Java in "
+				+ "Softwareentwicklung 2 noch weiter ausbauen.";
 	}
 }

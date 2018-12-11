@@ -79,4 +79,12 @@ public class MKB extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
+
+	public String getBeschreibung() {
+		return "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
+				+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
+				+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
+				+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
+				+ "Teilbarkeitsbeweise.";
+	}
 }

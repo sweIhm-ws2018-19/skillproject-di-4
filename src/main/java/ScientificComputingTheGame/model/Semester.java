@@ -27,20 +27,20 @@ public class Semester {
 //			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 2) {
-//			offeneKurse.add(new SoftwareEntwicklung2());
-//			offeneKurse.add(new DiskreteMathematik());
-//			offeneKurse.add(new AngewandteMathematik());
-//			offeneKurse.add(new ITSysteme2());
-//			offeneKurse.add(new TheoretischeInformatik());
+			offeneKurse.add(new SoftwareEntwicklung2());
+			offeneKurse.add(new DiskreteMathematik());
+			offeneKurse.add(new AngewandteMathematik());
+			offeneKurse.add(new ITSysteme2());
+			offeneKurse.add(new TheoretischeInformatik());
 //			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 3) {
-//			offeneKurse.add(new NumerischeMathematik());
-//			offeneKurse.add(new OperationsResearch());
-//			offeneKurse.add(new Differentialrechnung());
-//			offeneKurse.add(new AlgorithmenUndDatenstrukturen);
-//			offeneKurse.add(new SoftwareEngineering());
-//			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
+			offeneKurse.add(new NumerischeMathematik());
+			offeneKurse.add(new OperationsResearch());
+			offeneKurse.add(new Differentialrechnung());
+			offeneKurse.add(new AlgorithmenUndDatenstrukturen());
+			offeneKurse.add(new SoftwareEngineering());
+			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
 		}
 		else if(id == 4) {
 			//TODO evtl. starte Praxissemester

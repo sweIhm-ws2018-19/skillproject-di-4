@@ -84,4 +84,11 @@ public class Analysis extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
+
+	public String getBeschreibung() {
+		return "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
+				+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
+				+ "und Beweisverfahren, Integration  und Differentiation sowie "
+				+ "einige ihrer Anwendungen";
+	}
 }

@@ -63,6 +63,7 @@ public class ScientificComputingTheGame {
 		return offeneKurse;
 	}
 	
+
 	public static String getFrage(String kursName) {
 		kursDerFrage = spieler.getFrage(kursName);
 		gestellteFrage = kursDerFrage.getFrage();
