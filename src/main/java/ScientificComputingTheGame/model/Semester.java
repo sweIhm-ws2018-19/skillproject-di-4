@@ -12,8 +12,8 @@ public class Semester {
 	public Semester(ArrayList<Kurs> offeneKurse, int semesterID) {
 		id = semesterID;
 		kurse = getKurse(offeneKurse);
-		pruefungsPhaseBeginnen();
-		semesterBeenden();
+		//pruefungsPhaseBeginnen();
+		//semesterBeenden();
 	}
 	
 	public ArrayList<Kurs> getKurse(ArrayList<Kurs> offeneKurse) {
@@ -23,6 +23,7 @@ public class Semester {
 			offeneKurse.add(new Analysis());
 			offeneKurse.add(new MKB());
 			offeneKurse.add(new ITSysteme1());
+
 //			offeneKurse.add(waehleAWFach());
 		}
 		else if(id == 2) {
@@ -79,6 +80,17 @@ public class Semester {
 			}
 		}
 		return kurse;
+	}
+	
+	public Kurs getFrage(String kursName) {
+		Kurs richtigerKurs = null;
+		for (Kurs k: kurse) {
+			if(k.getName().toLowerCase().equals(kursName.toLowerCase())) {
+				richtigerKurs=k;
+			}
+		}
+		if (richtigerKurs==null) {return null;}
+		return richtigerKurs;
 	}
 	
 	private void semesterBeenden() {

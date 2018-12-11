@@ -1,98 +1,158 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "lieblingsfarbe",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "MyColorIsIntent",
-          "slots": [
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sctg",
+          "intents": [
             {
-              "name": "Color",
-              "type": "LIST_OF_COLORS"
+              "name": "welcome",
+              "slots": [],
+              "samples": [
+                "starten"
+              ]
+            },
+            {
+              "name": "CreditsIntent",
+              "slots": [],
+              "samples": [
+                "credits"
+              ]
+            },
+            {
+              "name": "AntwortenIntent",
+              "slots": [
+                {
+                  "name": "Antwort",
+                  "type": "POSSIBLE_ANSWERS"
+                }
+              ],
+              "samples": [
+                "Die Antwort ist {Antwort}",
+                "{Antwort}"
+              ]
+            },
+            {
+              "name": "UnknownIntent",
+              "slots": [],
+              "samples": []
+            },
+            {
+              "name": "AMAZON.FallbackIntent",
+              "samples": []
+            },
+            {
+              "name": "AMAZON.CancelIntent",
+              "samples": [
+                "halt"
+              ]
+            },
+            {
+              "name": "AMAZON.HelpIntent",
+              "samples": [
+                "hilfe"
+              ]
+            },
+            {
+              "name": "AMAZON.StopIntent",
+              "samples": [
+                "stop"
+              ]
+            },
+            {
+              "name": "AMAZON.NavigateHomeIntent",
+              "samples": [
+                "nach hause"
+              ]
+            },
+            {
+              "name": "FrageStellen",
+              "slots": [
+                {
+                  "name": "Abfrage",
+                  "type": "KIND_OF_QUESTIONS"
+                },
+                {
+                  "name": "Kurs",
+                  "type": "COURSES"
+                }
+              ],
+              "samples": [
+                "{Abfrage} aus {Kurs}",
+                "{Abfrage} {Kurs}"
+              ]
             }
           ],
-          "samples": [
-            " Meine Lieblingsfarbe ist {Color}",
-            " Ich mag {Color}"
-          ]
-        },
-        {
-          "name": "WhatsMyColorIntent",
-          "slots": [],
-          "samples": [
-            "was ist meine Lieblingsfarbe",
-            "welche Farbe mag ich am liebsten",
-            "sag mir meine Lieblingsfarbe"
-          ]
-        },
-        {
-          "name": "AMAZON.PauseIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ResumeIntent",
-          "samples": []
-        }
-      ],
-      "types": [
-        {
-          "name": "LIST_OF_COLORS",
-          "values": [
+          "types": [
             {
-              "name": {
-                "value": "grün"
-              }
+              "name": "KIND_OF_QUESTIONS",
+              "values": [
+                {
+                  "name": {
+                    "value": "pruefung"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "uebung"
+                  }
+                }
+              ]
             },
             {
-              "name": {
-                "value": "blau"
-              }
+              "name": "POSSIBLE_ANSWERS",
+              "values": [
+                {
+                  "name": {
+                    "value": "A"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "B"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "C"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "D"
+                  }
+                }
+              ]
             },
             {
-              "name": {
-                "value": "lila"
-              }
-            },
-            {
-              "name": {
-                "value": "rot"
-              }
-            },
-            {
-              "name": {
-                "value": "orange"
-              }
-            },
-            {
-              "name": {
-                "value": "rosa"
-              }
-            },
-            {
-              "name": {
-                "value": "türkis"
-              }
-            },
-            {
-              "name": {
-                "value": "gelb"
-              }
+              "name": "COURSES",
+              "values": [
+                {
+                  "name": {
+                    "value": "analysis"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "lineare algebra"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "softwareentwicklung eins"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "it-systeme"
+                  }
+                },
+                {
+                  "name": {
+                    "value": "mathematische konzepte und beweise"
+                  }
+                }
+              ]
             }
           ]
         }
-      ]
     }
-  }
 }

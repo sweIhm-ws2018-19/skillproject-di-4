@@ -12,6 +12,8 @@ public class Analysis extends Kurs {
 		anzahlZuBeantwortenderFragen = 2; 
 	}
 	
+	
+	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
 				{"Dies ist Frage 1 aus Analysis. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
@@ -22,7 +24,7 @@ public class Analysis extends Kurs {
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while(fragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
 			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
@@ -32,14 +34,53 @@ public class Analysis extends Kurs {
 		return fragen;
 	}
 	
+	@Override
+	public int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	
+	@Override
+	public int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+
+	@Override
+	public boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+
+	@Override
+	public void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+
+	@Override
+	public void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen = value;
+	}
+
+	@Override
+	public void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage = value;
+	}
+
+	
+	
+	
+	
+	
+	
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public int getAnzahlZuBeantwortenderFragen() {
 		return anzahlZuBeantwortenderFragen;
 	}
 
+	@Override
 	public int getECTS() {
 		return 5;
 	}
