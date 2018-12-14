@@ -12,7 +12,6 @@ public class Analysis extends Kurs {
 		anzahlZuBeantwortenderFragen = 2; 
 	}
 	
-	
 	@Override
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
@@ -63,12 +62,6 @@ public class Analysis extends Kurs {
 	public void setIstPruefungsFrage(boolean value) {
 		istPruefungsFrage = value;
 	}
-
-	
-	
-	
-	
-	
 	
 	@Override
 	public String getName() {
@@ -84,7 +77,8 @@ public class Analysis extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
-
+	
+	@Override
 	public String getBeschreibung() {
 		return "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
 				+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
