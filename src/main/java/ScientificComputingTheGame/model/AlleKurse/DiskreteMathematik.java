@@ -84,7 +84,7 @@ public class DiskreteMathematik extends Kurs {
 		return "Nach abschliessend dieses Kurses koennen Studierende einfache "
 				+ "Sachverhalte in der Sprache und mit den Modellen der Diskreten "
 				+ "Mathematik formulieren. Zudem erhalten sie Einblicke in einfache "
-				+ "Verschlüsselungsalgorithmen, Graphenentheorie, Relationen, "
+				+ "Verschluesselungsalgorithmen, Graphenentheorie, Relationen, "
 				+ "Permuationen und Rundungsfehler in der Gleitkommaarithmetik";
 	}
 }
