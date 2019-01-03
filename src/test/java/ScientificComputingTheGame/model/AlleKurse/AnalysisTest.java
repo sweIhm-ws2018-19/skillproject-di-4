@@ -1,7 +1,5 @@
 package test.java.ScientificComputingTheGame.model.AlleKurse;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 
 import org.junit.Assert;
@@ -31,7 +29,7 @@ public class AnalysisTest {
 				equals++;
 			}
 		}
-		if(equals == fragen.size()) {
+		if(equals == fragen.size()-1) {
 			return true;
 		}else {
 			return false;
