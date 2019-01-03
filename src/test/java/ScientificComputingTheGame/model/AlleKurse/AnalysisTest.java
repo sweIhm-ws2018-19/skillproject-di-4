@@ -10,7 +10,7 @@ import org.junit.Test;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
 
-class AnalysisTest {
+public class AnalysisTest {
 	
 	Analysis analysisTest = new Analysis();
 
@@ -19,10 +19,9 @@ class AnalysisTest {
 		Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
 		
-		
 	}
 
-	
+	@Test
 	private boolean testGetFragen() {
 		int equals = 0;
 		ArrayList<Frage> fragen = analysisTest.getFragen();
