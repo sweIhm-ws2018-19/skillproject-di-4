@@ -6,6 +6,9 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 public class AlgorithmenUndDatenstrukturen extends Kurs {
 	private String name = "Algorithmen und Datenstrukturen";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 Alg Dat", "Ja, Nein", "Ja"}, 
+			{"Frage 2 Alg Dat", "Ja, Nein", "Ja"}};
 
 	public AlgorithmenUndDatenstrukturen() {
 		super();
@@ -13,9 +16,7 @@ public class AlgorithmenUndDatenstrukturen extends Kurs {
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 Alg Dat", "Ja, Nein", "Ja"}, 
-				{"Frage 2 Alg Dat", "Ja, Nein", "Ja"}};
+		
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
