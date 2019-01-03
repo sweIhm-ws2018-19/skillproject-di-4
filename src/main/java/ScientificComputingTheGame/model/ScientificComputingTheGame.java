@@ -38,10 +38,6 @@ public class ScientificComputingTheGame {
 		output = "Das Spiel wurde gestartet";
 		offeneKurse = new ArrayList<Kurs>();
 		spieler = new Spieler(1);
-		//System.out.println(getFrage("SoftwareEntwicklung1"));
-		//Eigentlich hier semester und nicht in Konstruktor von Spieler
-		//System.out.println(getFrage("analysis"));
-		//studiumStarten();
 	}
 	
 	private static void studiumStarten() {
