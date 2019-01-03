@@ -21,8 +21,7 @@ public class AnalysisTest {
 		
 	}
 
-	@Test
-	private boolean testGetFragen() {
+	public boolean testGetFragen() {
 		int equals = 0;
 		ArrayList<Frage> fragen = analysisTest.getFragen();
 		for(int i=0; i < Analysis.alleFragen.length;i++) {
