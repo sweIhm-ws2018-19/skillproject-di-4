@@ -1,32 +1,35 @@
 package main.java.ScientificComputingTheGame.model.AlleKurse;
+
 import java.util.ArrayList;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEntwicklung2 extends Kurs {
-	private String name = "Softwareentwicklung 2";
+	public static final String name = "Softwareentwicklung 2";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = { { "Frage 1 S E 2", "Ja, Nein", "Ja" },
+			{ "Frage 2 S E 2", "Ja, Nein", "Ja" } };
+	public static final String beschreibung = "In Softwareentwicklung 2 vertiefen die Studierenden ihre Kentnisse "
+			+ "ueber Java. Unter anderem sind Ein und Ausgaben, Collections, "
+			+ "Rekursion, Netzwerkprogrammierung und Java Generics Themen der " + "Veranstaltung.";
 
 	public SoftwareEntwicklung2() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
 	}
-	
+
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 S E 2", "Ja, Nein", "Ja"}, 
-				{"Frage 2 S E 2", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while (zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
-			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
+			if (!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
 				fragen.add(neueFrage);
-				}
 			}
+		}
 		return fragen;
 	}
 
@@ -34,7 +37,7 @@ public class SoftwareEntwicklung2 extends Kurs {
 	public int getAnzahlGestellterFragen() {
 		return anzahlGestellterFragen;
 	}
-	
+
 	@Override
 	public int getAnzahlRichtigBeantworteterFragen() {
 		return anzahlRichtigBeantworteterFragen;
@@ -47,7 +50,7 @@ public class SoftwareEntwicklung2 extends Kurs {
 
 	@Override
 	public void setAnzahlGestellterFragen(int value) {
-		anzahlGestellterFragen=value;
+		anzahlGestellterFragen = value;
 	}
 
 	@Override
@@ -59,7 +62,7 @@ public class SoftwareEntwicklung2 extends Kurs {
 	public void setIstPruefungsFrage(boolean value) {
 		istPruefungsFrage = value;
 	}
-	
+
 	@Override
 	public String getName() {
 		return name;
@@ -74,11 +77,8 @@ public class SoftwareEntwicklung2 extends Kurs {
 	public int getECTS() {
 		return 8;
 	}
-	
+
 	public String getBeschreibung() {
-		return "In Softwareentwicklung 2 vertiefen die Studierenden ihre Kentnisse "
-				+ "ueber Java. Unter anderem sind Ein und Ausgaben, Collections, "
-				+ "Rekursion, Netzwerkprogrammierung und Java Generics Themen der "
-				+ "Veranstaltung.";
+		return beschreibung;
 	}
 }
