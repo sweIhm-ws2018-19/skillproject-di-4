@@ -4,8 +4,12 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Wahrscheinlichkeitsrechnung extends Kurs {
-	private String name = "Wahrscheinlichkeitsrechnung und Statistik";
+	public static final String name = "Wahrscheinlichkeitsrechnung und Statistik";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 Wahrscheinlichkeitsrechnung und Statistik", "Ja, Nein", "Ja"}, 
+			{"Frage 2 Wahrscheinlichkeitsrechnung und Statistik", "Ja, Nein", "Ja"}};
+	public static final String beschreibung = "TODO dieser Text fehlt";
 
 	public Wahrscheinlichkeitsrechnung() {
 		super();
@@ -13,9 +17,6 @@ public class Wahrscheinlichkeitsrechnung extends Kurs {
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 Wahrscheinlichkeitsrechnung und Statistik", "Ja, Nein", "Ja"}, 
-				{"Frage 2 Wahrscheinlichkeitsrechnung und Statistik", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -75,6 +76,6 @@ public class Wahrscheinlichkeitsrechnung extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }
