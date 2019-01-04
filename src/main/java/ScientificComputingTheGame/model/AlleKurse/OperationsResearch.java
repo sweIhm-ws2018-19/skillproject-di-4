@@ -4,8 +4,12 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class OperationsResearch extends Kurs {
-	private String name = "Operations Research";
+	public static final String name = "Operations Research";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 O R", "Ja, Nein", "Ja"}, 
+			{"Frage 2 O R", "Ja, Nein", "Ja"}};
+	public static final String beschreibung = "TODO dieser Text fehlt";
 
 	public OperationsResearch() {
 		super();
@@ -13,9 +17,6 @@ public class OperationsResearch extends Kurs {
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 O R", "Ja, Nein", "Ja"}, 
-				{"Frage 2 O R", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -76,6 +77,6 @@ public class OperationsResearch extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }
