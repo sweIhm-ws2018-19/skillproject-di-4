@@ -3,7 +3,7 @@ package test.java.ScientificComputingTheGame.model.AlleKurse;
 import java.util.ArrayList;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.AlleKurse.NumerischeMathematik;
