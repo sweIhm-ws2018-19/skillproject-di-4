@@ -17,7 +17,6 @@ public class AnalysisTest {
 		analysisTest.setAnzahlGestellterFragen(2);
 		analysisTest.setAnzahlRichtigBeantworteterFragen(2);
 		analysisTest.setIstPruefungsFrage(true);
-		// Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, analysisTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, analysisTest.getAnzahlRichtigBeantworteterFragen());

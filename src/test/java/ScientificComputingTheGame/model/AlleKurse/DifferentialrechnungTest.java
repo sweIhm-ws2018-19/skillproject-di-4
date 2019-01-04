@@ -17,7 +17,6 @@ public class DifferentialrechnungTest {
 		diffTest.setAnzahlGestellterFragen(2);
 		diffTest.setAnzahlRichtigBeantworteterFragen(2);
 		diffTest.setIstPruefungsFrage(true);
-		//Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2,diffTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, diffTest.getAnzahlRichtigBeantworteterFragen());

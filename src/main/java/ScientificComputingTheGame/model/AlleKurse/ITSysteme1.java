@@ -4,8 +4,20 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class ITSysteme1 extends Kurs {
-	private String name = "ITSysteme1";
+	public static final String name = "ITSysteme1";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 0 1 0", "18, 0, 215, 10", "10"},
+			{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 1 1 1", "15, -7, 98, 8", "15"},
+			{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? 12", "29, 18, 0, 178", "18"},
+			{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? B", "29, 18, 11, 2", "11"}};
+	public static final String beschreibung = "In IT Systeme 1 lernt man Grundlagen ueber den Aufbau und die "
+			+ "Funktionsweisen moderner IT Systeme. Dabei werden unter anderm "
+			+ "die Themenbereiche Informationsdarstellung, einfache "
+			+ "Datenstrukturen, Ablaufsteuerung, Grundlagen der Programmierung "
+			+ "auf Maschinenebene und Informationsdarstellung behandelt. "
+			+ "Schliesslich sollen fundierte Kentnisse ueber den Aufbau und die "
+			+ "Gemeinsamkeiten moderner Computer erlangt werden.";
 
 	public ITSysteme1() {
 		super();
@@ -14,11 +26,6 @@ public class ITSysteme1 extends Kurs {
 	
 	@Override
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 0 1 0", "18, 0, 215, 10", "10"},
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 1 1 1", "15, -7, 98, 8", "15"},
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? 12", "29, 18, 0, 178", "18"},
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? B", "29, 18, 11, 2", "11"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -79,12 +86,6 @@ public class ITSysteme1 extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "In IT Systeme 1 lernt man Grundlagen ueber den Aufbau und die "
-				+ "Funktionsweisen moderner IT Systeme. Dabei werden unter anderm "
-				+ "die Themenbereiche Informationsdarstellung, einfache "
-				+ "Datenstrukturen, Ablaufsteuerung, Grundlagen der Programmierung "
-				+ "auf Maschinenebene und Informationsdarstellung behandelt. "
-				+ "Schliesslich sollen fundierte Kentnisse ueber den Aufbau und die "
-				+ "Gemeinsamkeiten moderner Computer erlangt werden.";
+		return beschreibung;
 	}
 }

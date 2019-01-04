@@ -17,7 +17,6 @@ public class AngewandteMathematikTest {
 		angMatTest.setAnzahlGestellterFragen(2);
 		angMatTest.setAnzahlRichtigBeantworteterFragen(2);
 		angMatTest.setIstPruefungsFrage(true);
-		//Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2,angMatTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, angMatTest.getAnzahlRichtigBeantworteterFragen());

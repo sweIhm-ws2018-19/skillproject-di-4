@@ -17,7 +17,6 @@ public class DiskreteMathematikTest {
 		dmTest.setAnzahlGestellterFragen(2);
 		dmTest.setAnzahlRichtigBeantworteterFragen(2);
 		dmTest.setIstPruefungsFrage(true);
-		// Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, dmTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, dmTest.getAnzahlRichtigBeantworteterFragen());
