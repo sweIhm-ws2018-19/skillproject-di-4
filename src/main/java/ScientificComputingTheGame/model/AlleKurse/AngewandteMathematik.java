@@ -15,9 +15,9 @@ public class AngewandteMathematik extends Kurs {
 			+ "Problemstellungen zu entwickeln, diese mit Hilfe eines "
 			+ "Computeralgebrasystems zu loesen und die so erarbeiteten "
 			+ "Ergebnisse zu interpretieren, zu visualisieren und zu "
-			+ "praesentieren. Zunaechst findet fÃ¼r die Studierenden eine kurze "
-			+ "EinfÃ¼hrung in das Computer Algebrasystem Sage Math statt. "
-			+ "AnschlieÃŸend loesen die Studierenden vier kleine und eine groÃŸe "
+			+ "praesentieren. Zunaechst findet fuer die Studierenden eine kurze "
+			+ "Einfuehrung in das Computer Algebrasystem Sage Math statt. "
+			+ "Anschliessend loesen die Studierenden vier kleine und eine grosse "
 			+ "Gruppenarbeit aus der Mathematik mithilfe von Sage Math. "
 			+ "Besonderes Augenmerk liegt dabei auch darauf die Faehigkeiten zu "
 			+ "problemloesenden Denken, wissenschaftlich zu arbeiten,eigene "
@@ -93,3 +93,4 @@ public class AngewandteMathematik extends Kurs {
 		return beschreibung;
 	}
 }
+
