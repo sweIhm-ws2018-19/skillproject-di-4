@@ -6,16 +6,30 @@ import main.java.ScientificComputingTheGame.model.Kurs;
 public class AngewandteMathematik extends Kurs {
 	private String name = "Angewandte Mathematik";
 	private final int anzahlZuBeantwortenderFragen;
-
+	public static final String[][] alleFragen = {
+			{"Was ist ein Perceptron?", "Ein machine learning Algorithmus, Ein Logikgatter, ein mathematisches Problem, ein Problem ohne Loesung", "Ein machine learning Algorithmus"}, 
+			{"Welche Programmiersprache hat die zu Sage Math aehnlichste Syntax?", "P H P, Python, C, Java Script", "Python"}};
+	
+	public static final String beschreibung = "Nach Abschluss diese Faches sollen die Studierenden in der Lage "
+			+ "sein, einfache mathematische Modelle fuer praktische "
+			+ "Problemstellungen zu entwickeln, diese mit Hilfe eines "
+			+ "Computeralgebrasystems zu loesen und die so erarbeiteten "
+			+ "Ergebnisse zu interpretieren, zu visualisieren und zu "
+			+ "praesentieren. Zunaechst findet für die Studierenden eine kurze "
+			+ "Einführung in das Computer Algebrasystem Sage Math statt. "
+			+ "Anschließend loesen die Studierenden vier kleine und eine große "
+			+ "Gruppenarbeit aus der Mathematik mithilfe von Sage Math. "
+			+ "Besonderes Augenmerk liegt dabei auch darauf die Faehigkeiten zu "
+			+ "problemloesenden Denken, wissenschaftlich zu arbeiten,eigene "
+			+ "Ergebnisse darzustellen und zu vermitteln und die Teamfaehigkeit "
+			+ "zu staerken.";
+	
 	public AngewandteMathematik() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Was ist ein Perceptron?", "Ein machine learning Algorithmus, Ein Logikgatter, ein mathematisches Problem, ein Problem ohne Loesung", "Ein machine learning Algorithmus"}, 
-				{"Welche Programmiersprache hat die zu Sage Math aehnlichste Syntax?", "P H P, Python, C, Java Script", "Python"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -76,18 +90,6 @@ public class AngewandteMathematik extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "Nach Abschluss diese Faches sollen die Studierenden in der Lage "
-				+ "sein, einfache mathematische Modelle fuer praktische "
-				+ "Problemstellungen zu entwickeln, diese mit Hilfe eines "
-				+ "Computeralgebrasystems zu loesen und die so erarbeiteten "
-				+ "Ergebnisse zu interpretieren, zu visualisieren und zu "
-				+ "praesentieren. Zunaechst findet für die Studierenden eine kurze "
-				+ "Einführung in das Computer Algebrasystem Sage Math statt. "
-				+ "Anschließend loesen die Studierenden vier kleine und eine große "
-				+ "Gruppenarbeit aus der Mathematik mithilfe von Sage Math. "
-				+ "Besonderes Augenmerk liegt dabei auch darauf die Faehigkeiten zu "
-				+ "problemloesenden Denken, wissenschaftlich zu arbeiten,eigene "
-				+ "Ergebnisse darzustellen und zu vermitteln und die Teamfaehigkeit "
-				+ "zu staerken.";
+		return beschreibung;
 	}
 }

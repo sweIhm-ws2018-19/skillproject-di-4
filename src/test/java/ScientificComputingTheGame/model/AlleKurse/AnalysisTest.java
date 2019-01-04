@@ -11,12 +11,21 @@ import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
 public class AnalysisTest {
 	
 	Analysis analysisTest = new Analysis();
-
+	
 	@Test
 	public void testAllMethods() {
+		analysisTest.setAnzahlGestellterFragen(2);
+		analysisTest.setAnzahlRichtigBeantworteterFragen(2);
+		analysisTest.setIstPruefungsFrage(true);
 		//Assert.assertArrayEquals(Analysis.alleFragen, analysisTest.alleFragen);
 		Assert.assertTrue(testGetFragen());
-		
+		Assert.assertSame(2,analysisTest.getAnzahlGestellterFragen());
+		Assert.assertSame(2, analysisTest.getAnzahlRichtigBeantworteterFragen());
+		Assert.assertTrue(analysisTest.getIstPruefungsFrage());
+		Assert.assertSame(Analysis.name, analysisTest.getName());
+		Assert.assertSame(2, analysisTest.getAnzahlZuBeantwortenderFragen());
+		Assert.assertSame(5, analysisTest.getECTS());
+		Assert.assertSame(Analysis.beschreibung, analysisTest.getBeschreibung());
 	}
 
 	

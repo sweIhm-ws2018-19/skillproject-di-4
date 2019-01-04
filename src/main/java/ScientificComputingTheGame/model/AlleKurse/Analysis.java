@@ -4,13 +4,18 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Analysis extends Kurs {
-	private String name = "Analysis";
+	public static final String name = "Analysis";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Dies ist Frage 1 aus Analysis. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
 			{"Dies ist Frage 2 aus Analysis. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
 			{"Dies ist Frage 3 aus Analysis. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
 			{"Dies ist Frage 4 aus Analysis. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+	
+	public static final String beschreibung = "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
+			+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
+			+ "und Beweisverfahren, Integration  und Differentiation sowie "
+			+ "einige ihrer Anwendungen";
 
 	public Analysis() {
 		super();
@@ -80,9 +85,6 @@ public class Analysis extends Kurs {
 	
 	@Override
 	public String getBeschreibung() {
-		return "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
-				+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
-				+ "und Beweisverfahren, Integration  und Differentiation sowie "
-				+ "einige ihrer Anwendungen";
+		return beschreibung;
 	}
 }
