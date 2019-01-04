@@ -7,6 +7,9 @@ public abstract class Kurs {
 	private int anzahlRichtigBeantworteteFragen;
 	protected ArrayList<Frage> fragen;
 	private String momentaneAntwort;
+	public int anzahlGestellterFragen=0;
+	public int anzahlRichtigBeantworteterFragen=0;
+	public boolean istPruefungsFrage = false;
 	
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getAnzahlGestellterFragen();
@@ -20,10 +23,6 @@ public abstract class Kurs {
 	public abstract int getECTS();
 	public abstract String getBeschreibung();
 	
-	public int anzahlGestellterFragen=0;
-	public int anzahlRichtigBeantworteterFragen=0;
-	public boolean istPruefungsFrage = false;
-
 	protected Kurs() {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
