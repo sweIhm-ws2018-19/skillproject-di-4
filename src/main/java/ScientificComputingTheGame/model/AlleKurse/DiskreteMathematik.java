@@ -14,7 +14,7 @@ public class DiskreteMathematik extends Kurs {
 	
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
-				{"Aus was bestehen Graphen?", "Knoten und Kanten, Kreise und Linien, Zahlen und Buchstaben, Quadraten und Rechtecken", "Knoten und Kanten"}, 
+				{"Aus was bestehen Graphen?", "A Knoten und Kanten, B Kreise und Linien, C Zahlen und Buchstaben, D Quadraten und Rechtecken", "A"}, 
 				{"Wieviel ist 13 Modulo 5", "12, 3, 10, 0", "3"},
 				{"Wieviel ist 2 Modulo 3", "1, 3, 5, 0", "5"},
 				{"Wie nennt man einen Graphen den man ohne sich schneidende Kanten zeichnen kann?", "richtig, eulersch, diskret, plaettbar", "plaettbar"},
@@ -84,7 +84,7 @@ public class DiskreteMathematik extends Kurs {
 		return "Nach abschliessend dieses Kurses koennen Studierende einfache "
 				+ "Sachverhalte in der Sprache und mit den Modellen der Diskreten "
 				+ "Mathematik formulieren. Zudem erhalten sie Einblicke in einfache "
-				+ "Verschlüsselungsalgorithmen, Graphenentheorie, Relationen, "
+				+ "Verschluesselungsalgorithmen, Graphenentheorie, Relationen, "
 				+ "Permuationen und Rundungsfehler in der Gleitkommaarithmetik";
 	}
 }
