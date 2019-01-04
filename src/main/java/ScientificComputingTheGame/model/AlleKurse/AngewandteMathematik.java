@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class AngewandteMathematik extends Kurs {
-	private String name = "Angewandte Mathematik";
+	public static final String name = "Angewandte Mathematik";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Was ist ein Perceptron?", "Ein machine learning Algorithmus, Ein Logikgatter, ein mathematisches Problem, ein Problem ohne Loesung", "Ein machine learning Algorithmus"}, 
@@ -15,9 +15,9 @@ public class AngewandteMathematik extends Kurs {
 			+ "Problemstellungen zu entwickeln, diese mit Hilfe eines "
 			+ "Computeralgebrasystems zu loesen und die so erarbeiteten "
 			+ "Ergebnisse zu interpretieren, zu visualisieren und zu "
-			+ "praesentieren. Zunaechst findet für die Studierenden eine kurze "
-			+ "Einführung in das Computer Algebrasystem Sage Math statt. "
-			+ "Anschließend loesen die Studierenden vier kleine und eine große "
+			+ "praesentieren. Zunaechst findet fuer die Studierenden eine kurze "
+			+ "Einfuehrung in das Computer Algebrasystem Sage Math statt. "
+			+ "Anschliessend loesen die Studierenden vier kleine und eine grosse "
 			+ "Gruppenarbeit aus der Mathematik mithilfe von Sage Math. "
 			+ "Besonderes Augenmerk liegt dabei auch darauf die Faehigkeiten zu "
 			+ "problemloesenden Denken, wissenschaftlich zu arbeiten,eigene "
@@ -93,3 +93,4 @@ public class AngewandteMathematik extends Kurs {
 		return beschreibung;
 	}
 }
+

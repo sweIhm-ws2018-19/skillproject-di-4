@@ -1,7 +1,6 @@
 package main.java.ScientificComputingTheGame.model;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import main.java.ScientificComputingTheGame.model.AlleKurse.*;
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
@@ -12,8 +11,6 @@ public class Semester {
 	public Semester(ArrayList<Kurs> offeneKurse, int semesterID) {
 		id = semesterID;
 		kurse = getKurse(offeneKurse);
-		//pruefungsPhaseBeginnen();
-		//semesterBeenden();
 	}
 	
 	public ArrayList<Kurs> getKurse(ArrayList<Kurs> offeneKurse) {
@@ -89,9 +86,5 @@ public class Semester {
 		}
 		if (richtigerKurs==null) {return null;}
 		return richtigerKurs;
-	}
-	
-	private void semesterBeenden() {
-		//TODO "Sie haben das Semester beendet...
 	}
 }
