@@ -4,8 +4,12 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Differentialrechnung extends Kurs {
-	private String name = "Differentialrechnung im R hoch N";
+	public static final String name = "Differentialrechnung im R hoch N";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 Diff", "Ja, Nein", "Ja"}, 
+			{"Frage 2 Diff", "Ja, Nein", "Ja"}};
+	public static final String beschreibung = "TODO dieser Text fehlt";
 
 	public Differentialrechnung() {
 		super();
@@ -13,9 +17,7 @@ public class Differentialrechnung extends Kurs {
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 Diff", "Ja, Nein", "Ja"}, 
-				{"Frage 2 Diff", "Ja, Nein", "Ja"}};
+		
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -75,6 +77,6 @@ public class Differentialrechnung extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }
