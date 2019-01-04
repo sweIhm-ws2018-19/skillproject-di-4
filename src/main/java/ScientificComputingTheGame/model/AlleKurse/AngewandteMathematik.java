@@ -14,7 +14,7 @@ public class AngewandteMathematik extends Kurs {
 	
 	public ArrayList<Frage> getFragen() {
 		String[][] alleFragen = {
-				{"Was ist ein Perceptron?", "Ein machine learning Algorithmus, Ein Logikgatter, ein mathematisches Problem, ein Problem ohne Loesung", "Ein machine learning Algorithmus"}, 
+				{"Was ist ein Perceptron?", "A Ein machine learning Algorithmus, B Ein Logikgatter, C ein mathematisches Problem, D ein Problem ohne Loesung", "A"}, 
 				{"Welche Programmiersprache hat die zu Sage Math aehnlichste Syntax?", "P H P, Python, C, Java Script", "Python"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
