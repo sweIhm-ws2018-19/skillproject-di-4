@@ -1,7 +1,5 @@
 package test.java.ScientificComputingTheGame.model.AlleKurse;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
 
 import org.junit.Assert;
