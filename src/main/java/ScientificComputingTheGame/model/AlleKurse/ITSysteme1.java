@@ -17,8 +17,10 @@ public class ITSysteme1 extends Kurs {
 		String[][] alleFragen = {
 				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 0 1 0", "18, 0, 215, 10", "10"},
 				{"Welche Dezimalzahl entspricht die folgende vierstellige Binaerzahl? 1 1 1 1", "15, -7, 98, 8", "15"},
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? 12", "29, 18, 0, 178", "18"},
-				{"Welche Dezimalzahl entspricht die folgende vierstellige Hexadezimalzahl? B", "29, 18, 11, 2", "11"}};
+				{"Welche Dezimalzahl entspricht die folgende Hexadezimalzahl? 12", "29, 18, 0, 178", "18"},
+				{"Welche Dezimalzahl entspricht die folgende Hexadezimalzahl? B", "29, 18, 11, 2", "11"},
+				{"Ist die folgende Aussage ueber Unterprogramme in M M Ei X ist wahr? Sie koennen mehrmals aufgerufen werden.", "Ja, Nein", "Ja"},
+				{"Ist die folgende Aussage ueber Unterprogramme in M M Ei X ist wahr? Sie koennen beliebig viele Aufgaben ausfuehren.", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
