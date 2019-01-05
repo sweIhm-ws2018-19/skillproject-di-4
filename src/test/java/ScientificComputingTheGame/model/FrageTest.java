@@ -16,7 +16,7 @@ public class FrageTest {
 		Assert.assertSame(testFrage[2], frage.getAntwort());
 		// frageStellen?
 		// frageWiederholen?
-		// antwortAbwarten?
+		Assert.assertSame("A", frage.antwortAbwarten());
 		Assert.assertTrue(frage.antwortRichtig("Antwort"));
 	}
 

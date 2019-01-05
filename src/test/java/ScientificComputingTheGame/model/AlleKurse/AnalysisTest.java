@@ -25,6 +25,7 @@ public class AnalysisTest {
 		Assert.assertSame(2, analysisTest.getAnzahlZuBeantwortenderFragen());
 		Assert.assertSame(5, analysisTest.getECTS());
 		Assert.assertSame(Analysis.beschreibung, analysisTest.getBeschreibung());
+		
 	}
 
 	public boolean testGetFragen() {
