@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Analysis extends Kurs {
-	private String name = "Analysis";
+	public static final String name = "Analysis";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Wie lautet die Ableitung von e hoch x?", "A e, B 2 e hoch 3, C e hoch x, D x hoch e", "C"}, 
@@ -17,6 +17,11 @@ public class Analysis extends Kurs {
 			{"Wie lautet das Integral von 3 x plus 7?","A 3 x, B 10 x, C 3 x Quadrat plus 7 x, D 0","C"},
 			{"Wie lautet das Integral von Sinus x?", "A minus Cosinus x, B minus Cosinus x , C Sinus x hoch 2, D 15 Sinus x mal Cosinus x", "B"},
 			{"Wie lautet das Integral von 5 Cosinus x?", "A 5 Sinus x, B Cosinus 5 x C x mal Sinus von 5, D 5 mal x Cosinus 5 mal x", "A"}};
+
+	public static final String beschreibung = "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
+			+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
+			+ "und Beweisverfahren, Integration  und Differentiation sowie "
+			+ "einige ihrer Anwendungen";
 
 	public Analysis() {
 		super();
@@ -86,9 +91,6 @@ public class Analysis extends Kurs {
 	
 	@Override
 	public String getBeschreibung() {
-		return "Im Fach Analysis lernt man grundlegende Konzepte und Methoden. Unter "
-				+ "anderem in den folgenden Bereichen: Reihen, Grundlagen der Logik "
-				+ "und Beweisverfahren, Integration  und Differentiation sowie "
-				+ "einige ihrer Anwendungen";
+		return beschreibung;
 	}
 }

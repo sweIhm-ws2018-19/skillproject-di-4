@@ -4,8 +4,21 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class MKB extends Kurs {
-	private String name = "MKB";
+	public static final String name = "MKB";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Dies ist Frage 1 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
+			{"Dies ist Frage 2 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 3 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+      {"Dies ist Frage 5 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+      {"Dies ist Frage 6 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+	
+	public static final String beschreibung = "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
+			+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
+			+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
+			+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
+			+ "Teilbarkeitsbeweise.";
 
 	public MKB() {
 		super();
@@ -14,12 +27,6 @@ public class MKB extends Kurs {
 	
 	@Override
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Dies ist Frage 1 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-				{"Dies ist Frage 2 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 3 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-				{"Dies ist Frage 5 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -82,10 +89,6 @@ public class MKB extends Kurs {
 	}
 
 	public String getBeschreibung() {
-		return "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
-				+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
-				+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
-				+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
-				+ "Teilbarkeitsbeweise.";
+		return beschreibung;
 	}
 }

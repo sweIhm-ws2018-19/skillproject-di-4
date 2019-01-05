@@ -4,12 +4,14 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class AlgorithmenUndDatenstrukturen extends Kurs {
-	private String name = "Algorithmen und Datenstrukturen";
+	public static final String name = "Algorithmen und Datenstrukturen";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Frage 1 Alg Dat", "Ja, Nein", "Ja"}, 
 			{"Frage 2 Alg Dat", "Ja, Nein", "Ja"}};
-
+	public static final String beschreibung = "TODO dieser Text fehlt";
+	
+	
 	public AlgorithmenUndDatenstrukturen() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
@@ -77,6 +79,6 @@ public class AlgorithmenUndDatenstrukturen extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }

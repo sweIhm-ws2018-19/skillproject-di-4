@@ -4,8 +4,14 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class ITSysteme2 extends Kurs {
-	private String name = "IT Systeme 2";
+	public static final String name = "IT Systeme 2";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 IT Systeme 2", "Ja, Nein", "Ja"}, 
+			{"Frage 2 IT Systeme 2", "Ja, Nein", "Ja"}};
+	public static final String beschreibung = "In IT Systeme 2 werden die in IT Systeme 2 erlangten Grundlagen "
+			+ "vertieft. Des weiteren kommen Unterprogramme im BIOS des MMIX "
+			+ "Microprozessors als neues Themengebiet hinzu.";
 
 	public ITSysteme2() {
 		super();
@@ -14,9 +20,6 @@ public class ITSysteme2 extends Kurs {
 	
 	@Override
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 IT Systeme 2", "Ja, Nein", "Ja"}, 
-				{"Frage 2 IT Systeme 2", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -78,8 +81,6 @@ public class ITSysteme2 extends Kurs {
 	
 	@Override
 	public String getBeschreibung() {
-		return "In IT Systeme 2 werden die in IT Systeme 2 erlangten Grundlagen "
-				+ "vertieft. Des weiteren kommen Unterprogramme im BIOS des MMIX "
-				+ "Microprozessors als neues Themengebiet hinzu.";
+		return beschreibung;
 	}
 }

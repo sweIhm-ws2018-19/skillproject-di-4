@@ -4,8 +4,12 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class SoftwareEngineering extends Kurs {
-	private String name = "Software Engineering";
+	public static final String name = "Software Engineering";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = {
+			{"Frage 1 Software Engineering", "Ja, Nein", "Ja"}, 
+			{"Frage 2 Software Engineering", "Ja, Nein", "Ja"}};
+	public static final String beschreibung = "TODO dieser Text fehlt";
 
 	public SoftwareEngineering() {
 		super();
@@ -13,9 +17,6 @@ public class SoftwareEngineering extends Kurs {
 	}
 	
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 Software Engineering", "Ja, Nein", "Ja"}, 
-				{"Frage 2 Software Engineering", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
@@ -76,6 +77,6 @@ public class SoftwareEngineering extends Kurs {
 	}
 	
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }

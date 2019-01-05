@@ -1,32 +1,33 @@
 package main.java.ScientificComputingTheGame.model.AlleKurse;
+
 import java.util.ArrayList;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class NumerischeMathematik extends Kurs {
-	private String name = "Numerische Mathematik";
+	public static final String name = "Numerische Mathematik";
 	private final int anzahlZuBeantwortenderFragen;
+	public static final String[][] alleFragen = { { "Frage 1 Numerische Mathematik", "Ja, Nein", "Ja" },
+			{ "Frage 2 Numerische Mathematik", "Ja, Nein", "Ja" } };
+	public static final String beschreibung = "TODO dieser Text fehlt";
 
 	public NumerischeMathematik() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
 	}
-	
+
 	public ArrayList<Frage> getFragen() {
-		String[][] alleFragen = {
-				{"Frage 1 Numerische Mathematik", "Ja, Nein", "Ja"}, 
-				{"Frage 2 Numerische Mathematik", "Ja, Nein", "Ja"}};
 		fragen = new ArrayList<Frage>();
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while (zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
-			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
+			if (!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
 				fragen.add(neueFrage);
-				}
 			}
+		}
 		return fragen;
 	}
 
@@ -34,7 +35,7 @@ public class NumerischeMathematik extends Kurs {
 	public int getAnzahlGestellterFragen() {
 		return anzahlGestellterFragen;
 	}
-	
+
 	@Override
 	public int getAnzahlRichtigBeantworteterFragen() {
 		return anzahlRichtigBeantworteterFragen;
@@ -47,7 +48,7 @@ public class NumerischeMathematik extends Kurs {
 
 	@Override
 	public void setAnzahlGestellterFragen(int value) {
-		anzahlGestellterFragen=value;
+		anzahlGestellterFragen = value;
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class NumerischeMathematik extends Kurs {
 	public void setIstPruefungsFrage(boolean value) {
 		istPruefungsFrage = value;
 	}
-	
+
 	@Override
 	public String getName() {
 		return name;
@@ -74,8 +75,8 @@ public class NumerischeMathematik extends Kurs {
 	public int getECTS() {
 		return 5;
 	}
-	
+
 	public String getBeschreibung() {
-		return "TODO dieser Text fehlt";
+		return beschreibung;
 	}
 }
