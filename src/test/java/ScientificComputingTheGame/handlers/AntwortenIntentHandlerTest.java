@@ -24,7 +24,7 @@ public class AntwortenIntentHandlerTest {
 	@Before
 	public void setup() {
 		handler = new AntwortenIntentHandler(sctg);
-		ScientificComputingTheGame.main(null);
+		//ScientificComputingTheGame.main(null);
 	}
 
 	@Test

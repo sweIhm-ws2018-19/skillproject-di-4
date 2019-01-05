@@ -24,7 +24,7 @@ public class FallbackIntentHandlerTest {
 	@Before
 	public void setup() {
 		handler = new FallbackIntentHandler();
-		ScientificComputingTheGame.main(null);
+		//ScientificComputingTheGame.main(null);
 	}
 
 	@Test
