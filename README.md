@@ -1,6 +1,6 @@
 ﻿# Alexa Skill "Scientific Computing The Game"
-Die Funktion des Skills ist ein interaktives Spiel mit dem Anwender zu ermöglichen. Dieses Spiel stellt eine grobe und vereinfachte Version des Studiengangs Scientific Computing dar. 
+Der Skill soll den Studiengang Scientific Computing als Spiel nachstellen. Dafür werden jedes Semester die entsprechenden Kurse gestartet. 
 
-Der Spieler hat die Möglichkeit sein aktuelles Semester zu starten, indem er seine ersten paar Kurse wählt, die er in diesem Semester bestehen möchte. Daraufhin stellt Alexa dem Nutzer Übungsfragen bzw. eine gebündelte Anzahl Fragen im Fall einer Prüfung, die dieser richtig beantworten muss. Schafft der Spieler die Prüfungen rückt er in das nächste Semester vor, bis er das Studium und somit das Spiel abgeschlossen hat. 
+Als Prüfungsvorbereitung können unächst einige Probefragen gestartet werden um sich auf die Klausur vorzubereiten. Außerdem stehen zu jedem Fach kurze Erklärungen der wichtigsten Inhalte bereit.
 
-Neben dem Spiel gibt es zufällige Ereignisse, die das Studium etwas lebendiger wirken lassen sollen. 
+Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen richtig beantwortet werden. Immer wenn genug Fragen korrekt beantwortet wurden wird der Kurs beendet und dem Spieler die entsprechende Anzahl an ECTS Punkten gutgeschrieben. Falls die Prüfung jedoch nicht bestanden wurde muss sie im nächsten Semester wiederholt werden.
