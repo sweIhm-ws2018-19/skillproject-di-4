@@ -13,6 +13,8 @@ public class Frage {
 		richtigeLoesung = neueFrage[2];
 	}
 	
+	
+	
 	public String getFrage() {
 		return fragenText+" Die Antwortmoeglichkeiten sind: "+moeglicheLoesungen;
 	}

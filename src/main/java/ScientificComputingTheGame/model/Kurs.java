@@ -7,9 +7,6 @@ public abstract class Kurs {
 	private int anzahlRichtigBeantworteteFragen;
 	protected ArrayList<Frage> fragen;
 	private String momentaneAntwort;
-	public int anzahlGestellterFragen=0;
-	public int anzahlRichtigBeantworteterFragen=0;
-	public boolean istPruefungsFrage = false;
 	
 	public abstract ArrayList<Frage> getFragen();
 	public abstract int getAnzahlGestellterFragen();
@@ -23,10 +20,17 @@ public abstract class Kurs {
 	public abstract int getECTS();
 	public abstract String getBeschreibung();
 	
+	public int anzahlGestellterFragen=0;
+	public int anzahlRichtigBeantworteterFragen=0;
+	public boolean istPruefungsFrage = false;
+
 	protected Kurs() {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
+
+		//pruefungBeginnen();
+		//pruefungBewerten();
 	}
 	
 	public Frage getFrage() {
@@ -50,10 +54,26 @@ public abstract class Kurs {
 	public void pruefungBewerten() {
 		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
 			bestanden = true;
+			kursBeenden();
 		}
 	}
 	
+	protected void kursBeenden() {
+		// TODO Alexa says "Herzlichen Gluekwunsch. Du hast den Kurs getName() bestanden"
+	}
+	
+	protected void kursWiederholen() {
+		// TODO Alexa says "Leider hast du den Kurs getName() nicht bestanden."
+	}
+	
 	public boolean getBestanden() {
+		if(getAnzahlGestellterFragen()>0) {
+			
+			if ((getAnzahlRichtigBeantworteterFragen()/getAnzahlGestellterFragen())>=0.8 && getAnzahlGestellterFragen()>=1) {
+				bestanden = true;
+			} else bestanden = false;
+		
+		}
 		return bestanden;
 	}
 }
