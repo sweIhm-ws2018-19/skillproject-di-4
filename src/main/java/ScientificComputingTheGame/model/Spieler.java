@@ -11,7 +11,7 @@ public class Spieler {
 	public ArrayList<Kurs>offeneKurse = new ArrayList<Kurs>();
 	public Semester fSemester;
 	
-	Spieler(int semester) {
+	public Spieler(int semester) {
 		anzahlECTS = 0;
 		anzahlSemester = 0;
 		this.semester = semester;
