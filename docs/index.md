@@ -18,7 +18,7 @@ Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen ri
 <img src="images/SystemkontextAlexaSkill.png" alt="Systemkontext" class="inline"/>
 
 ## Anwendungsfalldiagramm
-<img src="images/AlexaSkill_Anwendungsfalldiagramm.png" alt="Anwendungsfalldiagramm" class="inline"/>
+<img src="images/Logo.png" alt="Anwendungsfalldiagramm" class="inline"/>
 # noch austauschen
 
 ## Klassendiagramm des AWS Lambda Funktion
