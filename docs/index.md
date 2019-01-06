@@ -1,4 +1,5 @@
-![alt text](https://github.com/sweIhm-ws2018-19/skillproject-di-4/blob/master/UML/Scientific%20Computing%20The%20Logo.PNG)
+<img src="images/Logo.PNG" alt="Logo" class="inline"/>
+
 # Alexa Skill "Scientific Computing The Game"
 Der Skill soll den Studiengang Scientific Computing als Spiel nachstellen. Dafür werden jedes Semester die entsprechenden Kurse gestartet. 
 
@@ -12,22 +13,14 @@ Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen ri
 [![Travis-CI Status](https://api.travis-ci.org/sweIhm-ws2018-19/skillproject-di-4.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/skillproject-di-4)
 
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=sweIhm_ws2018_19:lieblingsfarbe&metric=alert_status)](https://sonarcloud.io/dashboard?id=sweIhm_ws2018_19:lieblingsfarbe)
-# noch austauschen!!!
+##### noch austauschen!!!
 
-## Systemarchitektur
-<img src="images/SystemkontextAlexaSkill.png" alt="Systemkontext" class="inline"/>
+
+## Fachklassenmodell
+<img src="images/Fachklassenmodell.png" alt="Fachklassenmodell" class="inline"/>
 
 ## Anwendungsfalldiagramm
-<img src="images/Logo.png" alt="Anwendungsfalldiagramm" class="inline"/>
-# noch austauschen
-
-## Klassendiagramm des AWS Lambda Funktion
-<img src="images/LieblingsfarbeSkillKlassenmodell.png" alt="Klassenmodell" class="inline"/>
-# noch austauschen
-
-## Aktivitätsdiagramm Lieblingsfarbe eingeben
-<img src="images/AlexaSkill_Aktivitätsdiagramm.png" alt="Lieblingsfarbe eingeben" class="inline"/>
-# noch austauschen
+<img src="images/Anwendungsfalldiagramm.png" alt="Anwendungsfalldiagramm" class="inline"/>
 
 ## Was wir in den letzten Monaten gelernt haben
 - Der Sinn und die Funktionsweise von GitHub als Tool zur Versionsverwaltung.
