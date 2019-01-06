@@ -19,20 +19,8 @@ Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen ri
 ## Fachklassenmodell
 <img src="images/Fachklassenmodell.png" alt="Fachklassenmodell" class="inline"/>
 
-## Systemarchitektur
-<img src="images/SystemkontextAlexaSkill.png" alt="Systemkontext" class="inline"/>
-
 ## Anwendungsfalldiagramm
-<img src="images/Logo.png" alt="Anwendungsfalldiagramm" class="inline"/>
-##### noch austauschen
-
-## Klassendiagramm des AWS Lambda Funktion
-<img src="images/LieblingsfarbeSkillKlassenmodell.png" alt="Klassenmodell" class="inline"/>
-#### noch austauschen
-
-## Aktivitätsdiagramm Lieblingsfarbe eingeben
-<img src="images/AlexaSkill_Aktivitätsdiagramm.png" alt="Lieblingsfarbe eingeben" class="inline"/>
-#### noch austauschen
+<img src="images/Anwendungsfalldiagramm.png" alt="Anwendungsfalldiagramm" class="inline"/>
 
 ## Was wir in den letzten Monaten gelernt haben
 - Der Sinn und die Funktionsweise von GitHub als Tool zur Versionsverwaltung.
