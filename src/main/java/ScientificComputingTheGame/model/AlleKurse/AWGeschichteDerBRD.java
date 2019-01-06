@@ -3,24 +3,21 @@ import java.util.ArrayList;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
-public class MKB extends Kurs {
-	public static final String name = "MKB";
+public class AWGeschichteDerBRD extends Kurs {
+	public static final String name = "Geschichte der BRD";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
-			{"Dies ist Frage 1 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-			{"Dies ist Frage 2 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 3 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 5 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 6 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+			{"Wann wurde die B R D gegruendet?", "A 1457, B 1949, C 1918, D 2003", "B"}, 
+			{"Wie hiess der erste Bundeskanzler der BRD?", "A Friedrich Genscher, B Angela Bissmarck, C Johann Bach, D Konrad Adenauer", "D"},
+			{"Wie heisst die Verfassung der BRD?", " A Grundgesetz, B Buergerliches Gesetzbuch, C Deutsche Verfassung, D AGB BRD AG", "A"},
+			{"Wie viele Parteien stellten Bundeskanzler zwischen 1949 und 1990?", " A 2, B 4, C 1, D 5", "A"},
+			{"In welcher Stadt tagte der Bundestag vor der Wiedervereinigung?", "A Hamburg, B Dresden, C Bonn, D Lindau", "C"},
+			{"Welche Partei tratt nicht bei der Bundestagswahl 1961 an?", " A S P D, B C D U, C F D P, D die Gruenen", "D"}};
 	
-	public static final String beschreibung = "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
-			+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
-			+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
-			+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
-			+ "Teilbarkeitsbeweise.";
+	public static final String beschreibung = "Dies ist das A W Fach "
+			+ "Geschichte der Bundesrepublik Deutschland.";
 
-	public MKB() {
+	public AWGeschichteDerBRD() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
 	}
@@ -85,7 +82,7 @@ public class MKB extends Kurs {
 
 	@Override
 	public int getECTS() {
-		return 5;
+		return 2;
 	}
 
 	public String getBeschreibung() {

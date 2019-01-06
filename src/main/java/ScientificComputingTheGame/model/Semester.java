@@ -24,7 +24,7 @@ public class Semester {
 			offeneKurse.add(new Analysis());
 			offeneKurse.add(new MKB());
 			offeneKurse.add(new ITSysteme1());
-//			offeneKurse.add(waehleAWFach());
+			offeneKurse.add(waehleAWFach());
 			break;
 		case 2:
 			offeneKurse.add(new SoftwareEntwicklung2());
@@ -32,7 +32,7 @@ public class Semester {
 			offeneKurse.add(new AngewandteMathematik());
 			offeneKurse.add(new ITSysteme2());
 			offeneKurse.add(new TheoretischeInformatik());
-	//		offeneKurse.add(waehleAWFach());
+			offeneKurse.add(waehleAWFach());
 			break;
 		case 3:
 			offeneKurse.add(new NumerischeMathematik());
@@ -50,9 +50,12 @@ public class Semester {
 	}
 	
 	public Kurs waehleAWFach() {
-		//TODO read all AWFaecher
-		//TODO let player chooses AWFach
-		return null;
+		if(id == 1) {
+			return new AWGeschichteDerBRD();
+		}
+		else {
+			return new AWGeografie();
+		}
 	}
 	
 	public int getId() {
