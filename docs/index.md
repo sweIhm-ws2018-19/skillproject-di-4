@@ -1,4 +1,4 @@
-![alt text](https://github.com/sweIhm-ws2018-19/skillproject-di-4/blob/master/UML/Scientific%20Computing%20The%20Logo.PNG)
+![Logo](https://github.com/sweIhm-ws2018-19/skillproject-di-4/blob/master/UML/Scientific%20Computing%20The%20Logo.PNG)
 # Alexa Skill "Scientific Computing The Game"
 Der Skill soll den Studiengang Scientific Computing als Spiel nachstellen. Dafür werden jedes Semester die entsprechenden Kurse gestartet. 
 
