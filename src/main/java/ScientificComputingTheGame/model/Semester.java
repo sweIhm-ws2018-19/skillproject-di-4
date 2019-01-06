@@ -42,7 +42,7 @@ public class Semester {
 			offeneKurse.add(new SoftwareEngineering());
 			offeneKurse.add(new Wahrscheinlichkeitsrechnung());
 		case 4:
-			//TODO evtl. starte Praxissemester
+			offeneKurse.add(new Praxissemester());
 		case 5:
 			//TODO evtl. starte Auslandssemester
 		}
