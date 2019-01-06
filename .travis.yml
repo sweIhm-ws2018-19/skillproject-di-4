@@ -4,7 +4,7 @@ jdk:
 
 install:
   - mvn -N io.takari:maven:wrapper
-  - ./mvnw install
+  - ./mvnw install -Dmaven.test.skip=true
 
 addons:
    sonarcloud:
