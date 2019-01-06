@@ -1,28 +1,29 @@
 package test.java.ScientificComputingTheGame.handlers;
 
+import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
+
+import java.util.Optional;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import org.mockito.Mockito;
 
-import java.util.Optional;
-
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import com.amazon.ask.response.ResponseBuilder;
 import com.amazon.ask.model.Response;
+import com.amazon.ask.response.ResponseBuilder;
 
-import main.java.ScientificComputingTheGame.handlers.FallbackIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
 
-public class FallbackIntentHandlerTest {
-	private FallbackIntentHandler handler;
+public class SessionEndedRequestHandlerTest {
+
+	private SessionEndedRequestHandler handler;
 
 	@Before
 	public void setup() {
-		handler = new FallbackIntentHandler();
+		handler = new SessionEndedRequestHandler();
 	}
 
 	@Test
@@ -42,10 +43,8 @@ public class FallbackIntentHandlerTest {
 		Assert.assertTrue(returnResponse.isPresent());
 
 		final Response response = returnResponse.get();
-		Assert.assertFalse(response.getShouldEndSession());
-		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Tut mir leid, das weiss ich nicht. Sage einfach Hilfe."));
-
+		Assert.assertTrue(response.getShouldEndSession());
+		
 	}
 
 }
