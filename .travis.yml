@@ -4,7 +4,7 @@ jdk:
 
 install:
   - mvn -N io.takari:maven:wrapper
-  - ./mvnw install
+  - ./mvnw install -Dmaven.test.skip=true
 
 addons:
    sonarcloud:
@@ -12,4 +12,4 @@ addons:
 
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar 
-  - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -Dmaven.test.skip -DdescriptorId=jar-with-dependencies package 
+  - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly  -DdescriptorId=jar-with-dependencies package 
