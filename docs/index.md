@@ -1,4 +1,4 @@
-<img src="images/Logo.png" alt="Logo" class="inline"/>
+<img src="images/Logo.PNG" alt="Logo" class="inline"/>
 
 # Alexa Skill "Scientific Computing The Game"
 Der Skill soll den Studiengang Scientific Computing als Spiel nachstellen. Dafür werden jedes Semester die entsprechenden Kurse gestartet. 
