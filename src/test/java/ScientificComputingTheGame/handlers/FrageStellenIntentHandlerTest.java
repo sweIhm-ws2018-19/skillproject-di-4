@@ -53,5 +53,4 @@ public class FrageStellenIntentHandlerTest {
 						+ "Bitte sage nun 'Die Antwort ist' und nenne danach den Buchstaben der richtigen Antwort."));
 
 	}
-
 }

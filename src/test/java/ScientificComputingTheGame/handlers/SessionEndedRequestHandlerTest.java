@@ -44,7 +44,6 @@ public class SessionEndedRequestHandlerTest {
 
 		final Response response = returnResponse.get();
 		Assert.assertTrue(response.getShouldEndSession());
-		
 	}
 
 }
