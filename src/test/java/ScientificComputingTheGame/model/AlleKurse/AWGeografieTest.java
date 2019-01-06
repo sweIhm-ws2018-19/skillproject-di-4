@@ -23,7 +23,7 @@ public class AWGeografieTest {
 		Assert.assertTrue(awgeoTest.getIstPruefungsFrage());
 		Assert.assertSame(AWGeografie.name, awgeoTest.getName());
 		Assert.assertSame(2, awgeoTest.getAnzahlZuBeantwortenderFragen());
-		Assert.assertSame(5, awgeoTest.getECTS());
+		Assert.assertSame(2, awgeoTest.getECTS());
 		Assert.assertSame(AWGeografie.beschreibung, awgeoTest.getBeschreibung());
 
 	}
