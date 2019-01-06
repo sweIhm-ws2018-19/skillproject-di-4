@@ -22,7 +22,6 @@ class SemesterTest {
 		//ruefungsPhaseBeginnen?
 		//getOffeneKurse?
 		Assert.assertSame(new Analysis(),sem1Test.getFrage("Analysis"));
-		
 	}
 
 }

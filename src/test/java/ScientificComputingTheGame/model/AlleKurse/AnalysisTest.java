@@ -45,5 +45,4 @@ public class AnalysisTest {
 			return false;
 		}
 	}
-
 }

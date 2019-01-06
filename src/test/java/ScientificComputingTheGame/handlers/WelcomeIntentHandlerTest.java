@@ -53,5 +53,4 @@ public class WelcomeIntentHandlerTest {
 						+ "Also, wie schaut's aus? Sage mir, ob du die Pruefungs- oder die Uebungsaufgaben bearbeiten willst und aus welchem Fach diese stammen sollen. "));
 
 	}
-
 }

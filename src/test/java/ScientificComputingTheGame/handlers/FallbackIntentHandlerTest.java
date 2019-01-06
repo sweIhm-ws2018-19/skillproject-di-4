@@ -45,7 +45,6 @@ public class FallbackIntentHandlerTest {
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
 				.contains("Tut mir leid, das weiss ich nicht. Sage einfach Hilfe."));
-
 	}
 
 }

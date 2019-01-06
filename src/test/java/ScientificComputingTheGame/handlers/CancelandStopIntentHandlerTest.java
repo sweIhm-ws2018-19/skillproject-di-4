@@ -45,7 +45,6 @@ public class CancelandStopIntentHandlerTest {
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
 				.contains("Auf Wiedersehen"));
-
 	}
 
 }
