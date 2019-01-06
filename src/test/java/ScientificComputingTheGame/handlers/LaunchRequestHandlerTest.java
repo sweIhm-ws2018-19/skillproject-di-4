@@ -14,17 +14,18 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.response.ResponseBuilder;
 
-import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.LaunchRequestHandler;
 
-public class CancelandStopIntentHandlerTest {
-	
-	private CancelandStopIntentHandler handler;
-	
+public class LaunchRequestHandlerTest {
+
+	private LaunchRequestHandler handler;
+
 	@Before
 	public void setup() {
-		handler = new CancelandStopIntentHandler();
+		handler = new LaunchRequestHandler();
+		// ScientificComputingTheGame.main(null);
 	}
-	
+
 	@Test
 	public void testCanHandle() {
 		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
@@ -44,8 +45,8 @@ public class CancelandStopIntentHandlerTest {
 		final Response response = returnResponse.get();
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Auf Wiedersehen"));
-
+				.contains("Hallo und willkommen zu Scientific Computing The Game. Moechtest du starten?"));
+		Assert.assertTrue(
+				response.getReprompt().toString().contains("Bitte sag mein Bescheid, wenn du starten moechtest."));
 	}
-
 }

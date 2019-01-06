@@ -1,5 +1,6 @@
 package test.java.ScientificComputingTheGame.handlers;
 
+import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -14,17 +15,17 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.response.ResponseBuilder;
 
-import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.SessionEndedRequestHandler;
 
-public class CancelandStopIntentHandlerTest {
-	
-	private CancelandStopIntentHandler handler;
-	
+public class SessionEndedRequestHandlerTest {
+
+	private SessionEndedRequestHandler handler;
+
 	@Before
 	public void setup() {
-		handler = new CancelandStopIntentHandler();
+		handler = new SessionEndedRequestHandler();
 	}
-	
+
 	@Test
 	public void testCanHandle() {
 		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
@@ -42,10 +43,8 @@ public class CancelandStopIntentHandlerTest {
 		Assert.assertTrue(returnResponse.isPresent());
 
 		final Response response = returnResponse.get();
-		Assert.assertFalse(response.getShouldEndSession());
-		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Auf Wiedersehen"));
-
+		Assert.assertTrue(response.getShouldEndSession());
+		
 	}
 
 }

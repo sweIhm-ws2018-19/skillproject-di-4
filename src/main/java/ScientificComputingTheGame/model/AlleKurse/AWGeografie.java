@@ -3,24 +3,21 @@ import java.util.ArrayList;
 import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
-public class MKB extends Kurs {
-	public static final String name = "MKB";
+public class AWGeografie extends Kurs {
+	public static final String name = "Geografie";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
-			{"Dies ist Frage 1 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
-			{"Dies ist Frage 2 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 3 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 5 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 6 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+			{"Welche Himmlesrichtung gibt es nicht?", "A Osten, B Westen, C Norden, D Bosten", "D"}, 
+			{"Durch welchen Ort verlaeuft der Nullmeridian?", "A Greenwich, B Berlin, C Oster Inseln, D Hochschule Muenchen", "A"},
+			{"Wie werden Koordinaten angegeben?", " A in Celsius, B in Laengen und Breitengraden, C in Nautischen Meilen, D metern und Grad Celsius", "B"},
+			{"Wie heisst der nordlichste Punkt der Erde?", " A Flensburg, B Nowograd, C Nordpol, D Australien", "C"},
+			{"Wann entdechte Christoph Kolumbus Amerika?", "A 2003, B 1105, C 1956, D 1492", "D"},
+			{"Welcher der Folgenden ist kein Kontinent?", " A Australien, B Japan, C Afrika, D Europa", "B"}};
 	
-	public static final String beschreibung = "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
-			+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
-			+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
-			+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
-			+ "Teilbarkeitsbeweise.";
+	public static final String beschreibung = "Dies ist das A W Fach "
+			+ "Geografie.";
 
-	public MKB() {
+	public AWGeografie() {
 		super();
 		anzahlZuBeantwortenderFragen = 2;
 	}
@@ -85,7 +82,7 @@ public class MKB extends Kurs {
 
 	@Override
 	public int getECTS() {
-		return 5;
+		return 2;
 	}
 
 	public String getBeschreibung() {

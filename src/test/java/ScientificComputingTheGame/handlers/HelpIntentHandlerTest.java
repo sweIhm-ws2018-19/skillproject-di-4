@@ -14,17 +14,18 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.response.ResponseBuilder;
 
-import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.HelpIntentHandler;
 
-public class CancelandStopIntentHandlerTest {
-	
-	private CancelandStopIntentHandler handler;
-	
+public class HelpIntentHandlerTest {
+
+	private HelpIntentHandler handler;
+
 	@Before
 	public void setup() {
-		handler = new CancelandStopIntentHandler();
+		handler = new HelpIntentHandler();
+		//ScientificComputingTheGame.main(null);
 	}
-	
+
 	@Test
 	public void testCanHandle() {
 		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
@@ -44,7 +45,8 @@ public class CancelandStopIntentHandlerTest {
 		final Response response = returnResponse.get();
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Auf Wiedersehen"));
+				.contains("Du kannst mir Deine Lieblingsfarbe sagen. Sage zum Beispiel, meine Lieblingsfarbe ist rot."));
+		Assert.assertTrue(response.getReprompt().toString().contains("Bitte sage mir Deine Lieblingsfarbe."));
 
 	}
 
