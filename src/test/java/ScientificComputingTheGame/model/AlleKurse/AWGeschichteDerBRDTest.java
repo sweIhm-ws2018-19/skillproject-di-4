@@ -23,7 +23,7 @@ public class AWGeschichteDerBRDTest {
 		Assert.assertTrue(awgeschTest.getIstPruefungsFrage());
 		Assert.assertSame(AWGeschichteDerBRD.name, awgeschTest.getName());
 		Assert.assertSame(2, awgeschTest.getAnzahlZuBeantwortenderFragen());
-		Assert.assertSame(5, awgeschTest.getECTS());
+		Assert.assertSame(2, awgeschTest.getECTS());
 		Assert.assertSame(AWGeschichteDerBRD.beschreibung, awgeschTest.getBeschreibung());
 
 	}
