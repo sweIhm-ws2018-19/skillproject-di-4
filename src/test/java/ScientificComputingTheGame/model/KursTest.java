@@ -1,15 +1,23 @@
 package test.java.ScientificComputingTheGame.model;
 
-import org.junit.*;
-import main.java.ScientificComputingTheGame.model.Kurs;
+import org.junit.Assert;
+import org.junit.Test;
 
-class KursTest {
+import main.java.ScientificComputingTheGame.model.Kurs;
+import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
+
+public class KursTest {
 	
-//	private Kurs testKurs;
+	Analysis analysisTest = new Analysis();
+	Kurs kurs;
 
 	@Test
-	void testAllMethods() {
-		//TODO
+	public void test() {
+		Assert.assertFalse(kurs.getBestanden());
+		analysisTest.getFrage();
+		//getFrage(wieder mit methode)
+		//pruefungBeginnen?
+		//pruefungBewerten?
 	}
 
 }

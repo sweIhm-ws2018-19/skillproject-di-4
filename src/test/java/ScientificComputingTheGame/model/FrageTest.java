@@ -1,19 +1,23 @@
 package test.java.ScientificComputingTheGame.model;
 
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 import main.java.ScientificComputingTheGame.model.Frage;
-import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
 
-class FrageTest {
-	private Frage testFrage = new Frage(Analysis.alleFragen[0]);
+public class FrageTest {
+
+	private String[] testFrage = { "Frage", "moeglicheLsg", "Antwort" };
+	private Frage frage = new Frage(testFrage);
 
 	@Test
-	void testAllMethods() {
-		Assert.assertSame(Analysis.alleFragen[0][0] + Analysis.alleFragen[0][1], testFrage.getFrage());
-		Assert.assertSame(Analysis.alleFragen[0][2], testFrage.getAntwort());
-		Assert.assertSame("A", testFrage.antwortAbwarten()); //TODO mock?
-		Assert.assertTrue(testFrage.antwortRichtig(Analysis.alleFragen[0][2]));
+	public void testAllMethods() {
+		Assert.assertSame(testFrage[0] + " Die Antwortmoeglichkeiten sind: " + testFrage[1], frage.getFrage());
+		Assert.assertSame(testFrage[2], frage.getAntwort());
+		// frageStellen?
+		// frageWiederholen?
+		Assert.assertSame("A", frage.antwortAbwarten());
+		Assert.assertTrue(frage.antwortRichtig("Antwort"));
 	}
 
 }

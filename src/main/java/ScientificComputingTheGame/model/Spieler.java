@@ -12,7 +12,6 @@ public class Spieler {
 	public Semester fSemester;
 	
 	public Spieler(int semester) {
-		//name = nachNamenFragen();
 		anzahlECTS = 0;
 		anzahlSemester = 0;
 		this.semester = semester;
@@ -20,14 +19,17 @@ public class Spieler {
 	}
 	
 	
+	public boolean getSemesterBestanden() {
+		boolean bestanden = fSemester.getSemesterBestanden();
 		
-
-	/*private String nachNamenFragen() {
-		// TODO Nutzer nach Namen fragen
-		return null;
-	}*/
+		if (bestanden) {
+			fSemester = new Semester(new ArrayList<Kurs>(),semester++);
+		}
+		
+		return bestanden;
+	}
 	
-	public Frage getFrage(String kursName) {
+	public Kurs getFrage(String kursName) {
 		return fSemester.getFrage(kursName);
 	}
 

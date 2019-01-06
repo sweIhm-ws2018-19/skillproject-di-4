@@ -46,25 +46,24 @@ public class FrageStellenIntentHandler implements RequestHandler {
 
 		
 		if (kindOfQuestion.getValue().equals("uebung")) {
-			speechText = ScientificComputingTheGame.getFrage(kurs.getValue())+". Bitte sage nun 'Die Antwort ist ' und nenne danach den Buchstaben der richtigen Antwort.";
+			speechText = s.getFrage(kurs.getValue())+". Bitte sage nun 'Die Antwort ist' und nenne danach den Buchstaben der richtigen Antwort.";
 		} else {
 			if (kindOfQuestion.getValue().equals("pruefung")) {
-				
+				String frage = s.getFrage(kurs.getValue());
 				int quote=0;
-				if (ScientificComputingTheGame.getAnzahlGestellterFragen()!=0) {
-					quote =((ScientificComputingTheGame.getAnzahlRichtigBeantworteterFragen())/(ScientificComputingTheGame.getAnzahlGestellterFragen()));
-					quote *= 100;
+				if (s.kursDerFrage.getAnzahlGestellterFragen()!=0) {
+					quote =((s.kursDerFrage.getAnzahlRichtigBeantworteterFragen()*100)/(s.kursDerFrage.getAnzahlGestellterFragen()));
 				}
 				
 				speechText = "Dies ist eine Pruefungsfrage. Um zu bestehen, musst du bei mindestens 10 beantworteter Fragen "
 						+ "eine Erfolgsrate von mindestens 80 Prozent vorweisen. "
-						+ "Du hast bis jetzt "+ScientificComputingTheGame.getAnzahlGestellterFragen()+" Pruefungsfragen beantwortet und deine Quote liegt bei "
+						+ "Du hast bis jetzt "+s.kursDerFrage.getAnzahlGestellterFragen()+" Pruefungsfragen beantwortet und deine Quote liegt bei "
 						+ quote
 						+ " Prozent. Deine naechste Frage lautet: "
-						+ ScientificComputingTheGame.getFrage(kurs.getValue())+". "
-						+ "Bitte sage nun 'Die Antwort ist ' und nenne danach den Buchstaben der richtigen Antwort.";
-				ScientificComputingTheGame.setAnzahlGestellterFragen(ScientificComputingTheGame.getAnzahlGestellterFragen()+1);
-				ScientificComputingTheGame.setIstPruefungsFrage(true);
+						+ frage+". "
+						+ "Bitte sage nun 'Die Antwort ist' und nenne danach den Buchstaben der richtigen Antwort.";
+				s.kursDerFrage.setAnzahlGestellterFragen(s.kursDerFrage.getAnzahlGestellterFragen()+1);
+				s.kursDerFrage.setIstPruefungsFrage(true);
 			}
 		}
     	

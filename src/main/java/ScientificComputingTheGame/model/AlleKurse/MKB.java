@@ -4,14 +4,21 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class MKB extends Kurs {
-	public static String name = "Mathematische Konzepte und Beweise";
+	public static final String name = "MKB";
 	private final int anzahlZuBeantwortenderFragen;
-	public static String[][] alleFragen = {
+	public static final String[][] alleFragen = {
 			{"Dies ist Frage 1 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}, 
 			{"Dies ist Frage 2 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
 			{"Dies ist Frage 3 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
-			{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
+			{"Dies ist Frage 4 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 5 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"},
+			{"Dies ist Frage 6 aus Mathematische Konzepte und Beweise. Die Richtige Antwort ist A.", " A, B, C, D", "A"}};
 	
+	public static final String beschreibung = "Bei Mathematische Konzepte und Beweise dreht sich alles um Logik "
+			+ "und Beweise. Im Fokus steht dabei die Einfuehrung neuer "
+			+ "Studierender in die Denkweisen dieses Bereichs. Behandelt werden "
+			+ "unter anderem Beweistechniken wie Beweise durch Widerspruch und "
+			+ "Teilbarkeitsbeweise.";
 
 	public MKB() {
 		super();
@@ -24,7 +31,7 @@ public class MKB extends Kurs {
 		ArrayList<Integer> zufaelligeFragen = new ArrayList<Integer>();
 		int zufaelligeFrageID;
 		Frage neueFrage;
-		while(zufaelligeFragen.size() < anzahlZuBeantwortenderFragen) {
+		while(fragen.size() < anzahlZuBeantwortenderFragen) {
 			zufaelligeFrageID = (int) (Math.random() * (alleFragen.length));
 			if(!zufaelligeFragen.contains(zufaelligeFrageID)) {
 				neueFrage = new Frage(alleFragen[zufaelligeFrageID]);
@@ -33,6 +40,38 @@ public class MKB extends Kurs {
 			}
 		return fragen;
 	}
+	
+	
+	@Override
+	public int getAnzahlGestellterFragen() {
+		return anzahlGestellterFragen;
+	}
+	
+	@Override
+	public int getAnzahlRichtigBeantworteterFragen() {
+		return anzahlRichtigBeantworteterFragen;
+	}
+
+	@Override
+	public boolean getIstPruefungsFrage() {
+		return istPruefungsFrage;
+	}
+
+	@Override
+	public void setAnzahlGestellterFragen(int value) {
+		anzahlGestellterFragen=value;
+	}
+
+	@Override
+	public void setAnzahlRichtigBeantworteterFragen(int value) {
+		anzahlRichtigBeantworteterFragen = value;
+	}
+
+	@Override
+	public void setIstPruefungsFrage(boolean value) {
+		istPruefungsFrage = value;
+	}
+	
 	
 	@Override
 	public String getName() {
@@ -47,5 +86,9 @@ public class MKB extends Kurs {
 	@Override
 	public int getECTS() {
 		return 5;
+	}
+
+	public String getBeschreibung() {
+		return beschreibung;
 	}
 }

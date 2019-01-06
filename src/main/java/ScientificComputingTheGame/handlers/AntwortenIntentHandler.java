@@ -42,16 +42,30 @@ public class AntwortenIntentHandler implements RequestHandler {
 		Slot possibleAnswer = slots.get("Antwort");
 		input.getAttributesManager().setSessionAttributes(Collections.singletonMap(possibleAnswer.getValue(), "Antwort"));
 		
+		int quote = 0;
 		if(possibleAnswer.getValue() != null) {
 			if (possibleAnswer.getValue().toLowerCase().equals(ScientificComputingTheGame.getAntwort().getAntwort().toLowerCase())) {
 				
-				if(ScientificComputingTheGame.istPruefungsFrage) {
-					ScientificComputingTheGame.anzahlRichtigBeantworteterFragen++;
-					ScientificComputingTheGame.istPruefungsFrage=false;
+				if(s.kursDerFrage.istPruefungsFrage) {
+					s.kursDerFrage.anzahlRichtigBeantworteterFragen++;
+					s.kursDerFrage.istPruefungsFrage=false;
 				}
 				
 				speechText = "Deine Antwort war richtig. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";
-			} else {speechText = "Deine Antwort war falsch. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";}
+			} else {
+				s.kursDerFrage.istPruefungsFrage=false;
+				speechText = "Deine Antwort war falsch. Sage mir, ob du als naechstes eine Pruefungs- oder eine Uebungsaufgabe bearbeiten willst und aus welchem Fach diese stammen soll. ";
+				}
+			quote =((s.kursDerFrage.getAnzahlRichtigBeantworteterFragen()*100)/(s.kursDerFrage.getAnzahlGestellterFragen()));
+
+			if (s.kursDerFrage.anzahlRichtigBeantworteterFragen>=1 && quote>=80) {
+				speechText = " Herzlichen Glueckwunsch! Du hast diesen Kurs mit Erfolg abgelegt! Nun musst du hier keine Pruefungsfragen mehr beantworten, um das Semester zu bestehen.";
+				
+				if (s.getSemesterBestanden()) {
+					speechText += " Herzlichen Glueckwunsch! Nun hast du dieses Semester geschafft! Deine neuen Kurse stehen bereit.";
+					
+				}
+			}
 		}
 		
 

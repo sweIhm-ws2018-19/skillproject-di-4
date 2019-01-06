@@ -1,34 +1,27 @@
 package test.java.ScientificComputingTheGame.model;
 
 import java.util.ArrayList;
-import org.junit.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 import main.java.ScientificComputingTheGame.model.Kurs;
 import main.java.ScientificComputingTheGame.model.Semester;
 import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
-import main.java.ScientificComputingTheGame.model.AlleKurse.ITSysteme1;
-import main.java.ScientificComputingTheGame.model.AlleKurse.LineareAlgebra;
-import main.java.ScientificComputingTheGame.model.AlleKurse.MKB;
-import main.java.ScientificComputingTheGame.model.AlleKurse.SoftwareEntwicklung1;
+
 
 class SemesterTest {
 	
-	private ArrayList<Kurs> kurse;
-	private Semester testSemester = new Semester(kurse, 1);
-	
+	ArrayList<Kurs> testKurse;
+	Semester sem1Test = new Semester(testKurse,1);
+
 	@Test
 	void testAllMethods() {
-		//TODO
-		kurse.add(new SoftwareEntwicklung1());
-		kurse.add(new LineareAlgebra());
-		kurse.add(new Analysis());
-		kurse.add(new MKB());
-		kurse.add(new ITSysteme1());
-		Assert.assertSame(kurse, testSemester.getKurse(null));
-		Assert.assertSame(null, testSemester.waehleAWFach());
-		Assert.assertSame(1, testSemester.getId());
-//		Assert.assertSame(void, testSemester); mock ? //TODO
-		Assert.assertSame(kurse,testSemester.getOffeneKurse());
-//		Assert.assertSame(expected, testSemester.getFrage(kurs)); //mock TODO
+		Assert.assertNull(sem1Test.waehleAWFach());
+		Assert.assertSame(1, sem1Test.getId());
+		//ruefungsPhaseBeginnen?
+		//getOffeneKurse?
+		Assert.assertSame(new Analysis(),sem1Test.getFrage("Analysis"));
 	}
 
 }

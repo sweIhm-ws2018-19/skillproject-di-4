@@ -1,18 +1,21 @@
 package test.java.ScientificComputingTheGame.model;
 
-import org.junit.*;
-import main.java.ScientificComputingTheGame.model.Spieler;
+import org.junit.Assert;
+import org.junit.Test;
 
-class SpielerTest {
+import main.java.ScientificComputingTheGame.model.Spieler;
+import main.java.ScientificComputingTheGame.model.AlleKurse.Analysis;
+
+public class SpielerTest {
 	
-	private Spieler testSpieler = new Spieler(1);
+	Spieler spielerTest = new Spieler(1);
 
 	@Test
-	void testAllMethods() {
-		//TODO
-//		Assert.assertSame(Frage, testSpieler.getFrage(kursname)); mock ?
-		Assert.assertSame(0, testSpieler.getECTS());
-//		addECTS ??
+	public void testallMethods() {
+		Assert.assertSame(0, spielerTest.getECTS());
+		Assert.assertSame(new Analysis(), spielerTest.getFrage("Analysis"));
+		spielerTest.addECTS(1);
+		Assert.assertSame(1,spielerTest.getECTS());
 	}
 
 }
