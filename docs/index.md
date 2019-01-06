@@ -14,6 +14,9 @@ Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen ri
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=sweIhm_ws2018_19:lieblingsfarbe&metric=alert_status)](https://sonarcloud.io/dashboard?id=sweIhm_ws2018_19:lieblingsfarbe)
 # noch austauschen!!!
 
+## Fachklassenmodell
+<img src="images/Fachklassenmodell.png" alt="Fachklassenmodell" class="inline"/>
+
 ## Systemarchitektur
 <img src="images/SystemkontextAlexaSkill.png" alt="Systemkontext" class="inline"/>
 
