@@ -3,7 +3,7 @@ jdk:
  - oraclejdk8
 
 install:
-  - mvn -N io.takari:maven:wrapper
+  - mvn -N io.takari:maven:wrapper -Dmaven.test.skip=true
   - ./mvnw install -Dmaven.test.skip=true
 
 addons:
@@ -11,5 +11,5 @@ addons:
        organization: "sweihmws2018-19"
 
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar 
-  - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly  -DdescriptorId=jar-with-dependencies package 
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar -Dmaven.test.skip=true
+  - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package -Dmaven.test.skip=true
