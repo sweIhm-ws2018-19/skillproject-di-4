@@ -57,9 +57,6 @@
             <source>1.8</source>
             <target>1.8</target>
             <forceJavacCompilerUse>true</forceJavacCompilerUse>
-            <excludes>
-                    <exclude>test</exclude>
-            </excludes>
           </configuration>
         </plugin>
       </plugins>
