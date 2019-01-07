@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Differentialrechnung extends Kurs {
-	public static final String name = "Differentialrechnung im R hoch N";
+	public static final String name = "Differentialrechnung";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Frage 1 Diff", "Ja, Nein", "Ja"}, 

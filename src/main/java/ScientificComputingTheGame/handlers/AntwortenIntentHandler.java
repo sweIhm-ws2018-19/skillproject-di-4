@@ -63,7 +63,7 @@ public class AntwortenIntentHandler implements RequestHandler {
 				
 				if (s.getSemesterBestanden()) {
 					speechText += " Herzlichen Glueckwunsch! Nun hast du dieses Semester geschafft! Deine neuen Kurse stehen bereit.";
-					
+					speechText += " Du bist jetzt im " + s.getSemester() + "ten Semester.";
 				}
 			}
 		}

@@ -5,7 +5,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class TheoretischeInformatik extends Kurs {
-	public static final String name = "Theoretische Informatik";
+	public static final String name = "TheoretischeInformatik";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = { { "Frage 1 T I", "Ja, Nein", "Ja" },
 			{ "Frage 2 T I", "Ja, Nein", "Ja" } };

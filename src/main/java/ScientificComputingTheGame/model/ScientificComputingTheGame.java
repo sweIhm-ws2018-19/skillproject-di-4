@@ -27,6 +27,10 @@ public class ScientificComputingTheGame {
 		return bestanden;
 	}
 	
+	public static int getSemester() {
+		return Semester;
+	}
+	
 	public String getOutput() {
 		return output;
 	}

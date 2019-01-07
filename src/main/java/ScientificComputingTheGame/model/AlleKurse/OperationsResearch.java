@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class OperationsResearch extends Kurs {
-	public static final String name = "Operations Research";
+	public static final String name = "OperationsResearch";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Frage 1 O R", "Ja, Nein", "Ja"}, 

@@ -5,7 +5,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class NumerischeMathematik extends Kurs {
-	public static final String name = "Numerische Mathematik";
+	public static final String name = "NumerischeMathematik";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = { { "Frage 1 Numerische Mathematik", "Ja, Nein", "Ja" },
 			{ "Frage 2 Numerische Mathematik", "Ja, Nein", "Ja" } };
