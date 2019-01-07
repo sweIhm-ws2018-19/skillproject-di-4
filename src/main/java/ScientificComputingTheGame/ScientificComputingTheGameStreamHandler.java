@@ -29,6 +29,8 @@ import main.java.ScientificComputingTheGame.handlers.WelcomeIntentHandler;
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 import main.java.ScientificComputingTheGame.handlers.AntwortenIntentHandler;
 import main.java.ScientificComputingTheGame.handlers.CancelandStopIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.StatusIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.BeschreibungIntentHandler;
 
 public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler {
 
@@ -43,7 +45,9 @@ public class ScientificComputingTheGameStreamHandler extends SkillStreamHandler 
                         new FallbackIntentHandler(),
                         new FrageStellenIntentHandler(s),
                         new AntwortenIntentHandler(s),
-                        new WelcomeIntentHandler(s)
+                        new WelcomeIntentHandler(s),
+                        new StatusIntentHandler(s),
+                        new BeschreibungIntentHandler(s)
                         )
                 // Add your skill id below
                 .withSkillId("amzn1.ask.skill.6c52904c-e625-439f-bde3-4322e243883e")

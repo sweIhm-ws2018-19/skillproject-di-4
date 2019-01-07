@@ -13,10 +13,12 @@ public class SpielerTest {
 
 	@Test
 	public void testallMethods() {
-		Assert.assertSame(0, spielerTest.getECTS());
-		//Assert.assertSame(new Analysis(), spielerTest.getFrage("Analysis"));
-		spielerTest.addECTS(1);
-		Assert.assertSame(1,spielerTest.getECTS());
+
+		//Assert.assertSame(0, spielerTest.getECTS());
+		Assert.assertSame(new Analysis(), spielerTest.getFrage("Analysis"));
+		/*spielerTest.addECTS(1);
+		Assert.assertSame(1,spielerTest.getECTS());*/
+
 	}
 
 }

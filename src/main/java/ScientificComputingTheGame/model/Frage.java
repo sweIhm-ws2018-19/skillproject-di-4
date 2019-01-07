@@ -23,6 +23,7 @@ public class Frage {
 		return richtigeLoesung;
 	}
 	
+	/*
 	public void frageStellen() {
 		//TODO Alexa says fragenText und moeglicheLoesungen
 	}
@@ -37,7 +38,7 @@ public class Frage {
 		String nutzerAntwort = "A";		//TODO change to String from input
 		return nutzerAntwort;
 	}
-	
+	*/
 	public boolean antwortRichtig(String userSolution) {
 		if (userSolution.equals(richtigeLoesung)) {
 			awnserCorrect = true;

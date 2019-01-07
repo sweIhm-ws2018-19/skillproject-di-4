@@ -71,7 +71,7 @@ public class FrageStellenIntentHandler implements RequestHandler {
 
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
         return input.getResponseBuilder()
-                .withSimpleCard("FrageStellen", speechText)
+                .withSimpleCard("SCTG", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .withShouldEndSession(false)

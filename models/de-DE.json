@@ -11,13 +11,6 @@
               ]
             },
             {
-              "name": "CreditsIntent",
-              "slots": [],
-              "samples": [
-                "credits"
-              ]
-            },
-            {
               "name": "AntwortenIntent",
               "slots": [
                 {
@@ -28,6 +21,36 @@
               "samples": [
                 "Die Antwort ist {Antwort}",
                 "{Antwort}"
+              ]
+            },
+            {
+              "name": "StatusIntent",
+              "slots": [
+                {
+                  "name": "Course",
+                  "type": "AMAZON.CreativeWorkType"
+                }
+              ],
+              "samples": [
+                "Status von {Course}",
+                "Zeige mir den Status von dem Kurs {Course}",
+                "Zeige mir den Status von {Course}",
+                "Status {Course}"
+              ]
+            },
+            {
+              "name": "BeschreibungIntent",
+              "slots": [
+                {
+                  "name": "Beschreibung",
+                  "type": "AMAZON.CreativeWorkType"
+                }
+              ],
+              "samples": [
+                "Beschreibung von {Beschreibung}",
+                "Zeige mir den Beschreibung von dem Kurs {Beschreibung}",
+                "Zeige mir den Beschreibung von {Beschreibung}",
+                "Beschreibung {Beschreibung}"
               ]
             },
             {
@@ -76,7 +99,6 @@
                 }
               ],
               "samples": [
-                "{Abfrage} aus {Kurs}",
                 "{Abfrage} {Kurs}"
               ]
             }
@@ -102,22 +124,32 @@
               "values": [
                 {
                   "name": {
-                    "value": "A"
+                    "value": "a"
                   }
                 },
                 {
                   "name": {
-                    "value": "B"
+                    "value": "b"
                   }
                 },
                 {
                   "name": {
-                    "value": "C"
+                    "value": "c"
                   }
                 },
                 {
                   "name": {
-                    "value": "D"
+                    "value": "d"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "KURSE",
+              "values": [
+                {
+                  "name": {
+                    "value": "analysis"
                   }
                 }
               ]
@@ -147,7 +179,7 @@
                 },
                 {
                   "name": {
-                    "value": "mathematische konzepte und beweise"
+                    "value": "mkb"
                   }
                 }
               ]

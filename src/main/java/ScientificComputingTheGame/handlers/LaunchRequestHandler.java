@@ -33,7 +33,7 @@ public class LaunchRequestHandler implements RequestHandler {
         String speechText = "Hallo und willkommen zu Scientific Computing The Game. Moechtest du starten?";
         String repromptText = "Bitte sag mein Bescheid, wenn du starten moechtest.";
         return input.getResponseBuilder()
-                .withSimpleCard("ColorSession", speechText)
+                .withSimpleCard("SCTG", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .build();

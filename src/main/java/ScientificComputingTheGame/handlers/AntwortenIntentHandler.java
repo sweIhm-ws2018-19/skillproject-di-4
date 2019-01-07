@@ -34,6 +34,8 @@ public class AntwortenIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         String speechText = "!ERROR: Es konnte nicht auf den Slot zugegriffen werden!";
+        
+        
     	
     	Request request = input.getRequestEnvelope().getRequest();
 		IntentRequest intentRequest = (IntentRequest) request;
@@ -71,7 +73,7 @@ public class AntwortenIntentHandler implements RequestHandler {
 
         String repromptText = "Hier wird bald die erste Frage erscheinen. Work in Progress";
         return input.getResponseBuilder()
-                .withSimpleCard("Antworten", speechText)
+                .withSimpleCard("SCTG", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .withShouldEndSession(false)
