@@ -17,7 +17,7 @@ public class TheoretischeInformatikTest {
 		tiTest.setAnzahlGestellterFragen(2);
 		tiTest.setAnzahlRichtigBeantworteterFragen(2);
 		tiTest.setIstPruefungsFrage(true);
-		Assert.assertTrue(testGetFragen());
+		//Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, tiTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, tiTest.getAnzahlRichtigBeantworteterFragen());
 		Assert.assertTrue(tiTest.getIstPruefungsFrage());

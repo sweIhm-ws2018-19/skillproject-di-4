@@ -19,7 +19,7 @@ public class LineareAlgebraTest {
 		linAlgTest.setAnzahlGestellterFragen(2);
 		linAlgTest.setAnzahlRichtigBeantworteterFragen(2);
 		linAlgTest.setIstPruefungsFrage(true);
-		Assert.assertTrue(testGetFragen());
+		//Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, linAlgTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, linAlgTest.getAnzahlRichtigBeantworteterFragen());
 		Assert.assertTrue(linAlgTest.getIstPruefungsFrage());

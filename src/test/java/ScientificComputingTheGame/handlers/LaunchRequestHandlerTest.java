@@ -44,9 +44,7 @@ public class LaunchRequestHandlerTest {
 
 		final Response response = returnResponse.get();
 		Assert.assertFalse(response.getShouldEndSession());
-		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Hallo und willkommen zu Scientific Computing The Game. Moechtest du starten?"));
-		Assert.assertTrue(
-				response.getReprompt().toString().contains("Bitte sag mein Bescheid, wenn du starten moechtest."));
+		Assert.assertTrue(response.getOutputSpeech().toString().contains("Hallo und willkommen zu Scientific Computing The Game. Moechtest du starten?"));
+		Assert.assertTrue(response.getReprompt().toString().contains("Bitte sag mein Bescheid, wenn du starten moechtest."));
 	}
 }

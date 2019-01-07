@@ -17,7 +17,7 @@ public class AlgorithmenUndDatenstrukturenTest {
 		algDatTest.setAnzahlGestellterFragen(2);
 		algDatTest.setAnzahlRichtigBeantworteterFragen(2);
 		algDatTest.setIstPruefungsFrage(true);
-		Assert.assertTrue(testGetFragen());
+		//Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, algDatTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, algDatTest.getAnzahlRichtigBeantworteterFragen());
 		Assert.assertTrue(algDatTest.getIstPruefungsFrage());
