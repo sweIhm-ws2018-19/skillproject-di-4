@@ -17,9 +17,9 @@ public class Spieler {
 	
 	public boolean getSemesterBestanden() {
 		boolean bestanden = fSemester.getSemesterBestanden();
-		
+		semester += 1;
 		if (bestanden) {
-			fSemester = new Semester(new ArrayList<Kurs>(),semester++);
+			fSemester = new Semester(new ArrayList<Kurs>(),semester);
 		}
 		
 		return bestanden;

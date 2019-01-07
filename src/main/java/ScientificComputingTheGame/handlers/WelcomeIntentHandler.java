@@ -37,7 +37,7 @@ public class WelcomeIntentHandler implements RequestHandler{
 		
 		return input.getResponseBuilder()
 				.withSpeech(speechText)
-				.withSimpleCard("helloworld", speechText)
+				.withSimpleCard("SCTG", speechText)
 				.withShouldEndSession(false)
 				.build();
 	}

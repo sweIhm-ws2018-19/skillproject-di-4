@@ -35,7 +35,7 @@ public class HelpIntentHandler implements RequestHandler {
         		+ " um bei der Prüfung anzufangen oder fortzufahren.";
         String repromptText = "Bitte sage mir Deine Lieblingsfarbe.";
         return input.getResponseBuilder()
-                .withSimpleCard("ColorSession", speechText)
+                .withSimpleCard("SCTG", speechText)
                 .withSpeech(speechText)
                 .withReprompt(repromptText)
                 .withShouldEndSession(false)
