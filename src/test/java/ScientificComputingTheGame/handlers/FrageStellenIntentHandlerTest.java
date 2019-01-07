@@ -14,15 +14,16 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.response.ResponseBuilder;
 
-import main.java.ScientificComputingTheGame.handlers.WelcomeIntentHandler;
+import main.java.ScientificComputingTheGame.handlers.FrageStellenIntentHandler;
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
-public class WelcomeIntentHandlerTest {
-	private WelcomeIntentHandler handler;
+public class FrageStellenIntentHandlerTest {
+	private FrageStellenIntentHandler handler;
 
 	@Before
 	public void setup() {
-		handler = new WelcomeIntentHandler(new ScientificComputingTheGame());
+		ScientificComputingTheGame sctg = new ScientificComputingTheGame();
+		handler = new FrageStellenIntentHandler(sctg);
 	}
 
 	@Test
@@ -44,20 +45,13 @@ public class WelcomeIntentHandlerTest {
 		final Response response = returnResponse.get();
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
-<<<<<<< HEAD
-				.contains("im ersten Semester"));
-
-	}
-=======
-				.contains(". Du bist jetzt im ersten Semester. Deine Kurse fuer dieses Semester sind: \n "
-						+ "Softwareentwicklung 1, IT-Systeme 1, Lineare Algebra, Analysis und Mathematische Konzepte und Beweise.\n"
-						+ "Um das Studium abzuschliessen, musst du in jedem Semester alle Pruefungen bestehen. Damit du eine Pruefung"
-						+ "bestehst, musst du alle gestellten Fragen richtig beantworten. Vorher hast du die Moeglichkeit in jedem Fach "
-						+ "Uebungsfragen zu beantworten, um ein Gefuehl fuer die Pruefung zu bekommen. Es ist also so aehnlich wie in der Fahrschule."
-						+ "Was? Du hast noch keinen Fuehrerschein? Dann spiel das Spiel schnell durch und geh zur Fahrschule, du fauler Sack Mu Ha Ha Ha! "
-						+ "Also, wie schaut's aus? Sage mir, ob du die Pruefungs- oder die Uebungsaufgaben bearbeiten willst und aus welchem Fach diese stammen sollen. "));
+				.contains(". Bitte sage nun 'Die Antwort ist' und nenne danach den Buchstaben der richtigen Antwort."+"Dies ist eine Pruefungsfrage. Um zu bestehen, musst du bei mindestens 10 beantworteter Fragen "
+						+ "eine Erfolgsrate von mindestens 80 Prozent vorweisen. "
+						+ "Du hast bis jetzt "+" Pruefungsfragen beantwortet und deine Quote liegt bei "
+						+ " Prozent. Deine naechste Frage lautet: "
+						+ ". "
+						+ "Bitte sage nun 'Die Antwort ist' und nenne danach den Buchstaben der richtigen Antwort."));
 
 	}
 
->>>>>>> Chris
 }
