@@ -17,7 +17,7 @@ import com.amazon.ask.response.ResponseBuilder;
 import main.java.ScientificComputingTheGame.handlers.WelcomeIntentHandler;
 import main.java.ScientificComputingTheGame.model.ScientificComputingTheGame;
 
-public class WelcomeIntentHandlerTest {
+public class WelcomeIntentHandlerTest1 {
     private WelcomeIntentHandler handler;
 
     @Before
