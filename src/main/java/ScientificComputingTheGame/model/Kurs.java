@@ -28,9 +28,6 @@ public abstract class Kurs {
 		bestanden = false;
 		anzahlRichtigBeantworteteFragen = 0;
 		fragen = getFragen();
-
-		//pruefungBeginnen();
-		//pruefungBewerten();
 	}
 	
 	public Frage getFrage() {
@@ -41,6 +38,7 @@ public abstract class Kurs {
 		return fragen.get(pos);
 	}
 	
+	/*
 	public void pruefungBeginnen() {
 		for(Frage a: fragen) {
 			a.frageStellen();
@@ -50,21 +48,22 @@ public abstract class Kurs {
 			}
 		}
 	}
+	*/
 	
-	public void pruefungBewerten() {
-		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
-			bestanden = true;
-			kursBeenden();
-		}
-	}
-	
-	protected void kursBeenden() {
-		// TODO Alexa says "Herzlichen Gluekwunsch. Du hast den Kurs getName() bestanden"
-	}
-	
-	protected void kursWiederholen() {
-		// TODO Alexa says "Leider hast du den Kurs getName() nicht bestanden."
-	}
+//	public void pruefungBewerten() {
+//		if (anzahlRichtigBeantworteteFragen >= getAnzahlZuBeantwortenderFragen()/2) {
+//			bestanden = true;
+//			kursBeenden();
+//		}
+//	}
+//	
+//	protected void kursBeenden() {
+//		// TODO Alexa says "Herzlichen Gluekwunsch. Du hast den Kurs getName() bestanden"
+//	}
+//	
+//	protected void kursWiederholen() {
+//		// TODO Alexa says "Leider hast du den Kurs getName() nicht bestanden."
+//	}
 	
 	public boolean getBestanden() {
 		if(getAnzahlGestellterFragen()>0) {
