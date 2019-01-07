@@ -39,6 +39,21 @@
               ]
             },
             {
+              "name": "BeschreibungIntent",
+              "slots": [
+                {
+                  "name": "Beschreibung",
+                  "type": "AMAZON.CreativeWorkType"
+                }
+              ],
+              "samples": [
+                "Beschreibung von {Beschreibung}",
+                "Zeige mir den Beschreibung von dem Kurs {Beschreibung}",
+                "Zeige mir den Beschreibung von {Beschreibung}",
+                "Beschreibung {Beschreibung}"
+              ]
+            },
+            {
               "name": "UnknownIntent",
               "slots": [],
               "samples": []

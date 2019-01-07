@@ -17,7 +17,7 @@ public class MKB extends Kurs {
 
 	public MKB() {
 		super();
-		anzahlZuBeantwortenderFragen = 1;
+		anzahlZuBeantwortenderFragen = 2;
 	}
 	
 	@Override

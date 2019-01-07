@@ -68,7 +68,7 @@ public abstract class Kurs {
 	public boolean getBestanden() {
 		if(getAnzahlGestellterFragen()>0) {
 			
-			if ((getAnzahlRichtigBeantworteterFragen()/getAnzahlGestellterFragen())>=0.8 && getAnzahlGestellterFragen()>=1) {
+			if ((getAnzahlRichtigBeantworteterFragen()*100/getAnzahlGestellterFragen())>=80 && getAnzahlGestellterFragen()>=1) {
 				bestanden = true;
 			} else bestanden = false;
 		
