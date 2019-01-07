@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class Wahrscheinlichkeitsrechnung extends Kurs {
-	public static final String name = "Wahrscheinlichkeitsrechnung und Statistik";
+	public static final String name = "Wahrscheinlichkeitsrechnung";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Frage 1 Wahrscheinlichkeitsrechnung und Statistik", "Ja, Nein", "Ja"}, 

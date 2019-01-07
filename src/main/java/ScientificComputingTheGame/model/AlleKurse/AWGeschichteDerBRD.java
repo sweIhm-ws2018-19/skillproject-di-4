@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class AWGeschichteDerBRD extends Kurs {
-	public static final String name = "Geschichte der BRD";
+	public static final String name = "AWGeschichteDerBRD";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Wann wurde die B R D gegruendet?", "A 1457, B 1949, C 1918, D 2003", "B"}, 

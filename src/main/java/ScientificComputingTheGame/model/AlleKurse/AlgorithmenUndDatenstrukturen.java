@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class AlgorithmenUndDatenstrukturen extends Kurs {
-	public static final String name = "Algorithmen und Datenstrukturen";
+	public static final String name = "AlgorithmenundDatenstrukturen";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Frage 1 Alg Dat", "Ja, Nein", "Ja"}, 

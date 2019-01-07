@@ -8,16 +8,27 @@ public class ScientificComputingTheGame {
 	static String output = "Die Main wurde nicht ausgefuehrt";
 	public static Frage gestellteFrage;
 	public static Kurs kursDerFrage;
+	public static int Semester = 1;
 	
   
 	public static void main(String args[]) {
 		output = "Das Spiel wurde gestartet";
 		offeneKurse = new ArrayList<Kurs>();
-		spieler = new Spieler(1);
+		spieler = new Spieler(Semester);
 	}
 	
 	public static boolean getSemesterBestanden() {
-		return spieler.getSemesterBestanden();
+		boolean bestanden = spieler.getSemesterBestanden();
+		if (bestanden) {
+			Semester += 1;
+			spieler = new Spieler(Semester);
+		}
+			
+		return bestanden;
+	}
+	
+	public static int getSemester() {
+		return Semester;
 	}
 	
 	public String getOutput() {

@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class DiskreteMathematik extends Kurs {
-	public static final String name = "Diskrete Mathematik";
+	public static final String name = "DiskreteMathematik";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Aus was bestehen Graphen?", "A Knoten und Kanten, B Kreise und Linien, C Zahlen und Buchstaben, D Quadraten und Rechtecken", "A"}, 

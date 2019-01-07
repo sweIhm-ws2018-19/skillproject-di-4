@@ -4,7 +4,7 @@ import main.java.ScientificComputingTheGame.model.Frage;
 import main.java.ScientificComputingTheGame.model.Kurs;
 
 public class AngewandteMathematik extends Kurs {
-	public static final String name = "Angewandte Mathematik";
+	public static final String name = "AngewandteMathematik";
 	private final int anzahlZuBeantwortenderFragen;
 	public static final String[][] alleFragen = {
 			{"Was ist ein Perceptron?", "Ein machine learning Algorithmus, Ein Logikgatter, ein mathematisches Problem, ein Problem ohne Loesung", "Ein machine learning Algorithmus"}, 
