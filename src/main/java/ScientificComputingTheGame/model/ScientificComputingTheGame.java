@@ -5,14 +5,12 @@ import java.util.ArrayList;
 public class ScientificComputingTheGame {
 	static Spieler spieler;
 	public static ArrayList<Kurs> offeneKurse;
-	static String output = "Die Main wurde nicht ausgefuehrt";
 	public static Frage gestellteFrage;
 	public static Kurs kursDerFrage;
 	public static int Semester = 1;
 	
   
 	public static void main(String args[]) {
-		output = "Das Spiel wurde gestartet";
 		offeneKurse = new ArrayList<Kurs>();
 		spieler = new Spieler(Semester);
 	}
@@ -31,9 +29,6 @@ public class ScientificComputingTheGame {
 		return Semester;
 	}
 	
-	public String getOutput() {
-		return output;
-	}
 	
 	public ArrayList<Kurs> getOffeneKurse() {
 		return offeneKurse;

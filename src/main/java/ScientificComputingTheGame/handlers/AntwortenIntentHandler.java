@@ -34,6 +34,8 @@ public class AntwortenIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         String speechText = "!ERROR: Es konnte nicht auf den Slot zugegriffen werden!";
+        
+        
     	
     	Request request = input.getRequestEnvelope().getRequest();
 		IntentRequest intentRequest = (IntentRequest) request;

@@ -7,14 +7,18 @@
               "name": "welcome",
               "slots": [],
               "samples": [
-                "starten"
+                "starten",
+                "beginnen",
+                "anfangen",
+                "ja"
               ]
             },
             {
               "name": "CreditsIntent",
               "slots": [],
               "samples": [
-                "credits"
+                "credits",
+                "zeige mir die credits"
               ]
             },
             {

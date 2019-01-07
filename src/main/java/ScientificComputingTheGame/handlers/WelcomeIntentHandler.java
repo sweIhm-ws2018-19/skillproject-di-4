@@ -26,7 +26,7 @@ public class WelcomeIntentHandler implements RequestHandler{
 		//ScientificComputingTheGame s = new ScientificComputingTheGame();
 
 		ScientificComputingTheGame.main(null);
-		String speechText = s.getOutput()+". Du bist jetzt im ersten Semester. Deine Kurse fuer dieses Semester sind: \n "
+		String speechText = "Du bist jetzt im ersten Semester. Deine Kurse fuer dieses Semester sind: \n "
 				+ "Softwareentwicklung 1, IT-Systeme 1, Lineare Algebra, Analysis und Mathematische Konzepte und Beweise.\n"
 				+ "Um das Studium abzuschliessen, musst du in jedem Semester alle Pruefungen bestehen. Damit du eine Pruefung"
 				+ "bestehst, musst du alle gestellten Fragen richtig beantworten. Vorher hast du die Moeglichkeit in jedem Fach "
