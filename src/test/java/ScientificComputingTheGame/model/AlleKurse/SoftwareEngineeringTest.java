@@ -17,7 +17,7 @@ public class SoftwareEngineeringTest {
 		seTest.setAnzahlGestellterFragen(2);
 		seTest.setAnzahlRichtigBeantworteterFragen(2);
 		seTest.setIstPruefungsFrage(true);
-		Assert.assertTrue(testGetFragen());
+		//Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, seTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, seTest.getAnzahlRichtigBeantworteterFragen());
 		Assert.assertTrue(seTest.getIstPruefungsFrage());

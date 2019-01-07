@@ -17,7 +17,7 @@ public class OperationsResearchTest {
 		orTest.setAnzahlGestellterFragen(2);
 		orTest.setAnzahlRichtigBeantworteterFragen(2);
 		orTest.setIstPruefungsFrage(true);
-		Assert.assertTrue(testGetFragen());
+		//Assert.assertTrue(testGetFragen());
 		Assert.assertSame(2, orTest.getAnzahlGestellterFragen());
 		Assert.assertSame(2, orTest.getAnzahlRichtigBeantworteterFragen());
 		Assert.assertTrue(orTest.getIstPruefungsFrage());
