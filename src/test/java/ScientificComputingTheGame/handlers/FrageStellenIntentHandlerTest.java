@@ -22,8 +22,7 @@ public class FrageStellenIntentHandlerTest {
 
 	@Before
 	public void setup() {
-		ScientificComputingTheGame sctg = new ScientificComputingTheGame();
-		handler = new FrageStellenIntentHandler(sctg);
+		//handler = new FrageStellenIntentHandler(sctg);
 	}
 
 	@Test
