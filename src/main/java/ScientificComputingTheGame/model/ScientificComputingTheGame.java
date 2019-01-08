@@ -10,7 +10,7 @@ public class ScientificComputingTheGame {
 	public static int Semester = 1;
 	
   
-	public ScientificComputingTheGame(String args[]) {
+	public ScientificComputingTheGame() {
 		offeneKurse = new ArrayList<Kurs>();
 		spieler = new Spieler(Semester);
 	}
