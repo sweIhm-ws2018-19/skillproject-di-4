@@ -12,10 +12,6 @@ Um schließlich die Prüfung zu bestehen muss eine bestimmte Anzahl an Fragen ri
 ## Status
 [![Travis-CI Status](https://api.travis-ci.org/sweIhm-ws2018-19/skillproject-di-4.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/skillproject-di-4)
 
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=sweIhm_ws2018_19:lieblingsfarbe&metric=alert_status)](https://sonarcloud.io/dashboard?id=sweIhm_ws2018_19:lieblingsfarbe)
-##### noch austauschen!!!
-
-
 ## Fachklassenmodell
 <img src="images/Fachklassenmodell.png" alt="Fachklassenmodell" class="inline"/>
 
