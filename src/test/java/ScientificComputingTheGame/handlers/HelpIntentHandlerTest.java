@@ -45,7 +45,10 @@ public class HelpIntentHandlerTest {
 		final Response response = returnResponse.get();
 		Assert.assertFalse(response.getShouldEndSession());
 		Assert.assertTrue(response.getOutputSpeech().toString()
-				.contains("Du kannst mir Deine Lieblingsfarbe sagen. Sage zum Beispiel, meine Lieblingsfarbe ist rot."));
+				.contains("Dieses Spiel ist einem Quiz sehr aehnlich. Du beantwortest Fragen, steigst Level"
+        		+ " beziehungsweise Semester auf und gewinnst, wenn du alle bestanden hast."
+        		+ " Um Uebungsfragen zu erhalten sage: 'uebung' und das Fach oder 'pruefung' und das Fach,"
+        		+ " um bei der Pruefung anzufangen oder fortzufahren."));
 		Assert.assertTrue(response.getReprompt().toString().contains("Bitte sage mir Deine Lieblingsfarbe."));
 
 	}
